@@ -3,8 +3,11 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
-    { "source": "/cities/(.*)", "destination": "/cities/$1/index.html" },
-    { "source": "/liv-kamp", "destination": "/liv-kamp/index.html" },
+
+    { "source": "/cities/:city",  "destination": "/cities/:city/index.html" },
+    { "source": "/cities/:city/", "destination": "/cities/:city/index.html" },
+
+    { "source": "/liv-kamp",  "destination": "/liv-kamp/index.html" },
     { "source": "/liv-kamp/", "destination": "/liv-kamp/index.html" }
   ]
 }
