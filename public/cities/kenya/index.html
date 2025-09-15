@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liv Essências — Kenya</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <img src="/assets/logo-liv.png" alt="Logo Liv Essências" class="hero-logo" />
+    <h1>Liv Kenya</h1>
+    <p>Planícies, savanas e litoral — a energia da África Oriental numa imersão sensorial.</p>
+    <div class="hero-actions">
+      <button id="btnAudio" class="btn btn-primary">Tocar Som</button>
+      <button id="btnAudioStop" class="btn">Stop</button>
+    </div>
+  </header>
+
+  <!-- CENA 360º -->
+  <section class="scene-wrap">
+    <a-scene embedded>
+      <a-sky id="sky360" src="/assets/kenya-poster.png" rotation="0 -90 0"></a-sky>
+      <a-entity camera look-controls></a-entity>
+    </a-scene>
+  </section>
+
+  <main class="container">
+    <section class="section">
+      <h2>Kenya</h2>
+      <p>Da Reserva Maasai Mara ao Monte Kenya e às praias de Diani, o país pulsa entre tradição, vida selvagem e cores vibrantes.</p>
+
+      <div class="actions">
+        <button id="scene-maasai" class="btn">Maasai Mara</button>
+        <button id="scene-nairobi" class="btn">Nairobi Skyline</button>
+        <button id="scene-diani" class="btn">Diani Beach</button>
+        <button id="scene-mount" class="btn">Mount Kenya</button>
+        <button id="scene-poster" class="btn btn-ghost">Pôster</button>
+      </div>
+    </section>
+
+    <!-- Aromas -->
+    <section class="section" id="aromas">
+      <h2>Aromas de Kenya</h2>
+      <p class="muted"><em>“Brisa da savana, especiarias de mercado e calor de fogueira sob o céu estrelado.”</em></p>
+
+      <div id="aromaPreview" class="aroma-preview" hidden>
+        <img id="aromaImg" src="" alt="Aroma visual">
+      </div>
+
+      <div class="aromas-grid">
+        <div class="aroma-card" style="--tone:#6fd3a0">
+          <div class="aroma-head">
+            <h3>Amanhecer na Savana</h3><span class="pill">Frescor</span>
+          </div>
+          <p class="aroma-notes">Relva úmida, cítricos suaves, ar limpo</p>
+          <div class="aroma-actions">
+            <button class="btn btn-primary inspire-btn"
+              data-audio="/assets/audio-brisa.mp3"
+              data-img="/assets/savana-kenya.png">Inspire</button>
+          </div>
+        </div>
+
+        <div class="aroma-card" style="--tone:#d48b2a">
+          <div class="aroma-head">
+            <h3>Mercado de Especiarias</h3><span class="pill">Calor</span>
+          </div>
+          <p class="aroma-notes">Cardamomo, cravo, gengibre</p>
+          <div class="aroma-actions">
+            <button class="btn btn-primary inspire-btn"
+              data-audio="/assets/especiarias-kenya.mp3"
+              data-img="/assets/especiarias-kenya.png">Inspire</button>
+          </div>
+        </div>
+
+        <div class="aroma-card" style="--tone:#7b4b2a">
+          <div class="aroma-head">
+            <h3>Noite de Safari</h3><span class="pill">Misticismo</span>
+          </div>
+          <p class="aroma-notes">Fumaça de lenha, âmbar, terra quente</p>
+          <div class="aroma-actions">
+            <button class="btn btn-primary inspire-btn"
+              data-audio="/assets/noite-safari-kenya.mp3"
+              data-img="/assets/noite-safari-kenya.png">Inspire</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="section">
+      <h2>Galeria Kenya</h2>
+      <div class="media-grid">
+        <figure><img src="/assets/maasai-mara.png" alt="Maasai Mara"><figcaption>Maasai Mara</figcaption></figure>
+        <figure><img src="/assets/nairobi.png" alt="Nairobi"><figcaption>Nairobi</figcaption></figure>
+        <figure><img src="/assets/diani.png" alt="Diani Beach"><figcaption>Diani Beach</figcaption></figure>
+        <figure><img src="/assets/mount-kenya.png" alt="Mount Kenya"><figcaption>Mount Kenya</figcaption></figure>
+      </div>
+
+      <!-- Narração — Kenya -->
+      <div class="narration-card">
+        <h3>Narração — Kenya</h3>
+        <p class="muted">Uma introdução breve ao país.</p>
+        <div class="narration-actions">
+          <button class="btn btn-primary" id="narPlay">Play</button>
+          <button class="btn" id="narPause">Pause</button>
+          <button class="btn" id="narStop">Stop</button>
+        </div>
+        <audio id="narAudio" preload="auto">
+          <source src="/assets/kenya.mp3?v=2" type="audio/mpeg" />
+        </audio>
+      </div>
+    </section>
+
+    <!-- Vídeos -->
+<section class="section">
+  <h2>Vídeos — Kenya</h2>
+  <div class="media-grid">
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/ZlQxY1F-Z64"
+        title="Vídeo 1 — Kenya"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/8OS3Q2CPFvk"
+        title="Vídeo 2 — Kenya"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/4W61GqRttNY"
+        title="Vídeo 3 — Kenya"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Áudios -->
+  <audio id="bgAudio" loop preload="auto"><source src="/assets/musica.mp3" type="audio/mpeg"></audio>
+  <audio id="aromaAudio" preload="auto"></audio>
+
+  <footer class="footer"><small>© Liv Essências — Kenya</small></footer>
+
+  <script>
+    // Música geral
+    const btn = document.getElementById("btnAudio");
+    const btnStop = document.getElementById("btnAudioStop");
+    const bgAudio = document.getElementById("bgAudio");
+    if (btn && btnStop && bgAudio) {
+      let isPlaying = false;
+      const upd = ()=> btn.textContent = isPlaying ? "Pausar Som" : "Tocar Som";
+      btn.onclick = async () => { if (!isPlaying){ await bgAudio.play(); isPlaying = true; } else { bgAudio.pause(); isPlaying=false; } upd(); };
+      btnStop.onclick = () => { bgAudio.pause(); bgAudio.currentTime=0; isPlaying=false; upd(); };
+      upd();
+    }
+
+    // 360 — cenas
+    const sky = document.getElementById("sky360");
+    const setSky = (src) => sky.setAttribute("src", src);
+    document.getElementById("scene-maasai").onclick  = () => setSky("/assets/maasai-mara.png");
+    document.getElementById("scene-nairobi").onclick = () => setSky("/assets/nairobi.png");
+    document.getElementById("scene-diani").onclick   = () => setSky("/assets/diani.png");
+    document.getElementById("scene-mount").onclick   = () => setSky("/assets/mount-kenya.png");
+    document.getElementById("scene-poster").onclick  = () => setSky("/assets/kenya-poster.png");
+
+    // Aromas
+    const aromaAudio = document.getElementById('aromaAudio');
+    const previewBox = document.getElementById('aromaPreview');
+    const previewImg = document.getElementById('aromaImg');
+    document.querySelectorAll('.inspire-btn').forEach(btn=>{
+      btn.addEventListener('click', async ()=>{
+        if (!bgAudio.paused){ bgAudio.pause(); bgAudio.currentTime=0; }
+        aromaAudio.src = btn.dataset.audio;
+        try { await aromaAudio.play(); } catch {}
+        previewImg.src = btn.dataset.img;
+        previewBox.hidden = false;
+        previewBox.scrollIntoView({ behavior:'smooth', block:'center' });
+      });
+    });
+
+    // Narração
+    const nar = document.getElementById('narAudio');
+    const narPlay  = document.getElementById('narPlay');
+    const narPause = document.getElementById('narPause');
+    const narStop  = document.getElementById('narStop');
+    if (nar && narPlay && narPause && narStop) {
+      narPlay.onclick = async () => {
+        try { if (!bgAudio.paused){ bgAudio.pause(); bgAudio.currentTime=0; } } catch {}
+        try { if (!aromaAudio.paused){ aromaAudio.pause(); aromaAudio.currentTime=0; } } catch {}
+        try { await nar.play(); } catch {}
+      };
+      narPause.onclick = () => nar.pause();
+      narStop.onclick  = () => { nar.pause(); nar.currentTime = 0; };
+    }
+  </script>
+</body>
+</html>
