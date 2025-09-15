@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liv Essências — Paris</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <img src="/assets/logo-liv.png" alt="Logo Liv Essências" class="hero-logo" />
+    <h1>Liv Paris</h1>
+    <p>A cidade luz — arte, romance, cafés e aromas inesquecíveis.</p>
+    <div class="hero-actions">
+      <button id="btnAudio" class="btn btn-primary">Tocar Som</button>
+      <button id="btnAudioStop" class="btn">Stop</button>
+    </div>
+  </header>
+
+  <!-- CENA 360º -->
+  <section class="scene-wrap">
+    <a-scene embedded>
+      <a-sky id="sky360" src="/assets/paris-poster.png" rotation="0 -90 0"></a-sky>
+      <a-entity camera look-controls></a-entity>
+    </a-scene>
+  </section>
+
+  <main class="container">
+    <section class="section">
+      <h2>Paris</h2>
+      <p>Das margens do Sena às luzes da Torre Eiffel, Paris é poesia em cada rua. Capital da arte, da moda e da alta gastronomia, une tradição e sofisticação.</p>
+
+      <div class="actions">
+        <button id="scene-eiffel" class="btn">Torre Eiffel</button>
+        <button id="scene-louvre" class="btn">Museu do Louvre</button>
+        <button id="scene-notredame" class="btn">Notre-Dame</button>
+        <button id="scene-montmartre" class="btn">Montmartre</button>
+        <button id="scene-poster" class="btn btn-ghost">Pôster</button>
+      </div>
+    </section>
+
+    <!-- Aromas -->
+    <section class="section" id="aromas">
+      <h2>Aromas de Paris</h2>
+      <p class="muted"><em>“Perfumes de flores, cafés parisienses e notas doces ecoam pela cidade luz.”</em></p>
+
+      <div id="aromaPreview" class="aroma-preview" hidden>
+        <img id="aromaImg" src="" alt="Aroma visual">
+      </div>
+
+      <div class="aromas-grid">
+        <div class="aroma-card" style="--tone:#ffb6c1">
+          <div class="aroma-head">
+            <h3>Primavera em Paris</h3><span class="pill">Romance</span>
+          </div>
+          <p class="aroma-notes">Rosas frescas, jasmim, pétalas de lilás</p>
+          <div class="aroma-actions">
+            <button class="btn btn-primary inspire-btn"
+              data-audio="/assets/primavera-paris.mp3"
+              data-img="/assets/primavera-paris.png">Inspire</button>
+          </div>
+        </div>
+
+        <div class="aroma-card" style="--tone:#8b4513">
+          <div class="aroma-head">
+            <h3>Café de Montmartre</h3><span class="pill">Aconchego</span>
+          </div>
+          <p class="aroma-notes">Café torrado, croissant amanteigado, madeira leve</p>
+          <div class="aroma-actions">
+            <button class="btn btn-primary inspire-btn"
+              data-audio="/assets/cafe-paris.mp3"
+              data-img="/assets/cafe-paris.png">Inspire</button>
+          </div>
+        </div>
+
+        <div class="aroma-card" style="--tone:#daa520">
+          <div class="aroma-head">
+            <h3>Noite no Sena</h3><span class="pill">Elegância</span>
+          </div>
+          <p class="aroma-notes">Champanhe, baunilha suave, âmbar</p>
+          <div class="aroma-actions">
+            <button class="btn btn-primary inspire-btn"
+              data-audio="/assets/noite-paris.mp3"
+              data-img="/assets/noite-paris.png">Inspire</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="section">
+      <h2>Galeria Paris</h2>
+      <div class="media-grid">
+        <figure><img src="/assets/eiffel.png" alt="Torre Eiffel"><figcaption>Torre Eiffel</figcaption></figure>
+        <figure><img src="/assets/louvre.png" alt="Louvre"><figcaption>Museu do Louvre</figcaption></figure>
+        <figure><img src="/assets/notredame.png" alt="Notre-Dame"><figcaption>Notre-Dame</figcaption></figure>
+        <figure><img src="/assets/montmartre.png" alt="Montmartre"><figcaption>Montmartre</figcaption></figure>
+      </div>
+
+      <div class="narration-card">
+        <h3>Narração — Paris</h3>
+        <p class="muted">Uma introdução breve sobre a cidade luz.</p>
+        <div class="narration-actions">
+          <button class="btn btn-primary" id="narPlay">Play</button>
+          <button class="btn" id="narPause">Pause</button>
+          <button class="btn" id="narStop">Stop</button>
+        </div>
+        <audio id="narAudio" preload="auto">
+          <source src="/assets/paris.mp3?v=2" type="audio/mpeg" />
+        </audio>
+      </div>
+    </section>
+
+    <!-- Vídeos -->
+    <section class="section">
+      <h2>Vídeos — Paris</h2>
+      <div class="media-grid">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/SV7QQfoc8SA"
+            title="Vídeo 1 — Paris"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/lURRAlz9ym0"
+            title="Vídeo 2 — Paris"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/WHNNHAoaZD4"
+            title="Vídeo 3 — Paris"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <audio id="bgAudio" loop preload="auto"><source src="/assets/musica.mp3" type="audio/mpeg"></audio>
+  <audio id="aromaAudio" preload="auto"></audio>
+
+  <footer class="footer"><small>© Liv Essências — Paris</small></footer>
+
+  <script>
+    const btn = document.getElementById("btnAudio");
+    const btnStop = document.getElementById("btnAudioStop");
+    const bgAudio = document.getElementById("bgAudio");
+    if (btn && btnStop && bgAudio) {
+      let isPlaying = false;
+      const upd = ()=> btn.textContent = isPlaying ? "Pausar Som" : "Tocar Som";
+      btn.onclick = async () => { if (!isPlaying){ await bgAudio.play(); isPlaying = true; } else { bgAudio.pause(); isPlaying=false; } upd(); };
+      btnStop.onclick = () => { bgAudio.pause(); bgAudio.currentTime=0; isPlaying=false; upd(); };
+      upd();
+    }
+
+    const sky = document.getElementById("sky360");
+    const setSky = (src) => sky.setAttribute("src", src);
+    document.getElementById("scene-eiffel").onclick   = () => setSky("/assets/eiffel.png");
+    document.getElementById("scene-louvre").onclick   = () => setSky("/assets/louvre.png");
+    document.getElementById("scene-notredame").onclick= () => setSky("/assets/notredame.png");
+    document.getElementById("scene-montmartre").onclick= () => setSky("/assets/montmartre.png");
+    document.getElementById("scene-poster").onclick   = () => setSky("/assets/paris-poster.png");
+
+    const aromaAudio = document.getElementById('aromaAudio');
+    const previewBox = document.getElementById('aromaPreview');
+    const previewImg = document.getElementById('aromaImg');
+    document.querySelectorAll('.inspire-btn').forEach(btn=>{
+      btn.addEventListener('click', async ()=>{
+        if (!bgAudio.paused){ bgAudio.pause(); bgAudio.currentTime=0; }
+        aromaAudio.src = btn.dataset.audio;
+        try { await aromaAudio.play(); } catch {}
+        previewImg.src = btn.dataset.img;
+        previewBox.hidden = false;
+        previewBox.scrollIntoView({ behavior:'smooth', block:'center' });
+      });
+    });
+
+    const nar = document.getElementById('narAudio');
+    const narPlay  = document.getElementById('narPlay');
+    const narPause = document.getElementById('narPause');
+    const narStop  = document.getElementById('narStop');
+    if (nar && narPlay && narPause && narStop) {
+      narPlay.onclick = async () => {
+        try { if (!bgAudio.paused){ bgAudio.pause(); bgAudio.currentTime=0; } } catch {}
+        try { if (!aromaAudio.paused){ aromaAudio.pause(); aromaAudio.currentTime=0; } } catch {}
+        try { await nar.play(); } catch {}
+      };
+      narPause.onclick = () => nar.pause();
+      narStop.onclick  = () => { nar.pause(); nar.currentTime = 0; };
+    }
+  </script>
+</body>
+</html>
