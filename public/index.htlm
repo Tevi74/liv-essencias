@@ -5,83 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Liv Essências – Realidade Aumentada</title>
   <link rel="stylesheet" href="/assets/global/styles.css">
+  <link rel="icon" href="/assets/global/logo.png">
+  <meta name="description" content="Experiências AR das fragrâncias Liv Essências e Liv Kamp Gel.">
 </head>
 <body>
   <div class="container">
     <header class="header">
-     <img src="/assets/global/logo.png" alt="Liv Essências" class="logo">
+      <img src="/assets/global/logo.png" alt="Liv Essências" class="logo">
       <h1>Experiência AR – Liv Essências</h1>
     </header>
 
     <section class="card">
       <h2>Escolha sua fragrância</h2>
       <div class="grid">
-
         <a class="city" href="/cities/barcelona/">
-          <img src="/assets/posters/poster-barcelona.jpg" alt="Barcelona">
+          <img src="/assets/poster-barcelona.png" alt="Barcelona">
           <h3>Barcelona</h3>
         </a>
 
         <a class="city" href="/cities/paris/">
-          <img src="/assets/posters/poster-paris.jpg" alt="Paris">
+          <img src="/assets/poster-paris.png" alt="Paris">
           <h3>Paris</h3>
         </a>
 
         <a class="city" href="/cities/milao/">
-          <img src="/assets/posters/poster-milao.jpg" alt="Milão">
+          <img src="/assets/poster-milao.png" alt="Milão">
           <h3>Milão</h3>
         </a>
 
         <a class="city" href="/cities/marrakech/">
-          <img src="/assets/posters/poster-marrakech.jpg" alt="Marrakech">
+          <img src="/assets/poster-marrakech.png" alt="Marrakech">
           <h3>Marrakech</h3>
         </a>
 
         <a class="city" href="/cities/kenya/">
-          <img src="/assets/posters/poster-kenya.jpg" alt="Kenya">
+          <img src="/assets/poster-kenya.png" alt="Kenya">
           <h3>Kenya</h3>
         </a>
 
         <a class="city" href="/cities/lisboa/">
-          <img src="/assets/posters/poster-lisboa.jpg" alt="Lisboa">
+          <img src="/assets/poster-lisboa.png" alt="Lisboa">
           <h3>Lisboa</h3>
         </a>
 
         <a class="city" href="/cities/buenos-aires/">
-          <img src="/assets/posters/poster-buenos-aires.jpg" alt="Buenos Aires">
+          <img src="/assets/poster-buenos-aires.png" alt="Buenos Aires">
           <h3>Buenos Aires</h3>
         </a>
 
         <a class="city" href="/cities/berlim/">
-          <img src="/assets/posters/poster-berlim.jpg" alt="Berlim">
+          <img src="/assets/poster-berlim.png" alt="Berlim">
           <h3>Berlim</h3>
         </a>
 
         <a class="city" href="/cities/nova-york/">
-          <img src="/assets/posters/poster-nova-york.jpg" alt="Nova York">
+          <img src="/assets/poster-nova-york.png" alt="Nova York">
           <h3>Nova York</h3>
         </a>
 
         <a class="city" href="/cities/amazonia/">
-          <img src="/assets/posters/poster-amazonia.jpg" alt="Amazônia">
+          <img src="/assets/poster-amazonia.png" alt="Amazônia">
           <h3>Amazônia</h3>
         </a>
 
         <a class="city" href="/cities/toquio/">
-          <img src="/assets/posters/poster-toquio.jpg" alt="Tóquio">
+          <img src="/assets/poster-toquio.png" alt="Tóquio">
           <h3>Tóquio</h3>
         </a>
 
         <a class="city" href="/liv-kamp/">
-          <img src="/assets/posters/poster-liv-kamp.jpg" alt="Liv Kamp Gel">
+          <img src="/assets/poster-liv-kamp.png" alt="Liv Kamp Gel">
           <h3>Liv Kamp Gel</h3>
         </a>
-
       </div>
     </section>
 
     <footer class="footer">
-      © 2025 Liv Essências
-    <a href="mailto:contato@livessencias.com.br">contato@livessencias.com.br</a> · 
-  <a href="https://www.livessencias.com.br" target="_blank">www.livessencias.com.br</a>
-</footer>
+      © 2025 Liv Essências ·
+      <a href="mailto:contato@livessencias.com.br">contato@livessencias.com.br</a> ·
+      <a href="https://www.livessencias.com.br" target="_blank" rel="noopener">www.livessencias.com.br</a>
+    </footer>
+  </div>
+</body>
+</html>
