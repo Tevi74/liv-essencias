@@ -9,7 +9,7 @@
 <body>
   <div class="container">
     <header class="header">
-      <img src="/assets/global/logo.png" alt="Liv Essências" class="logo">
+     <img src="/assets/global/logo.png" alt="Liv Essências" class="logo">
       <h1>Experiência AR – Liv Essências</h1>
     </header>
 
@@ -82,7 +82,6 @@
 
     <footer class="footer">
       © 2025 Liv Essências
-    </footer>
-  </div>
-</body>
-</html>
+    <a href="mailto:contato@livessencias.com.br">contato@livessencias.com.br</a> · 
+  <a href="https://www.livessencias.com.br" target="_blank">www.livessencias.com.br</a>
+</footer>
