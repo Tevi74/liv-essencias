@@ -1,0 +1,131 @@
+:root {
+  --bg:#0b0d12;
+  --fg:#e7edf4;
+  --muted:#9bb0c9;
+  --brand:#00c2ff;
+  --panel:#0f131b;
+  --panel2:#0b0f16;
+  --border:#1f2733;
+}
+
+* { box-sizing:border-box; }
+html, body {
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+
+/* ---------- Botões ---------- */
+.btn {
+  padding:10px 16px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:#111826;
+  color:#dfe9ff;
+  cursor:pointer;
+  font-weight:700;
+  transition:transform .08s ease, box-shadow .12s ease, filter .12s ease;
+}
+.btn:hover { filter:brightness(1.06); box-shadow:0 6px 16px rgba(0,0,0,.25); transform:translateY(-1px); }
+.btn:active { transform:translateY(0); }
+.btn-primary { background:var(--brand); border-color:transparent; color:#00131a; box-shadow:0 8px 18px rgba(0,194,255,.28); }
+.btn-ghost { background:transparent; color:var(--muted); }
+
+/* ---------- Hero (Milão) ---------- */
+.hero {
+  text-align:center;
+  padding:56px 16px 40px;
+  background-color:#001f3f;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.46),rgba(0,0,0,.60)),
+    url("/assets/milao-poster.png?v=2") center/cover no-repeat,
+    #001f3f;
+  border-bottom:1px solid var(--border);
+}
+.hero-logo { max-width:120px; margin:0 auto 16px; display:block; }
+.hero h1 { margin:0 0 8px; font-size:2rem; }
+.hero p { margin:0 auto 18px; color:#d9e7ff; max-width:780px; }
+.hero .hero-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+/* ---------- Cena 360 ---------- */
+.scene-wrap {
+  width:100%;
+  height:60vh; max-height:700px;
+  border-radius:16px; overflow:hidden;
+  margin:18px auto; max-width:1100px;
+  box-shadow:0 14px 36px rgba(0,0,0,.35);
+}
+
+/* ---------- Estrutura ---------- */
+.container { max-width:1100px; margin:0 auto; padding:0 18px 28px; }
+.section {
+  background:var(--panel); border:1px solid var(--border);
+  border-radius:16px; padding:18px; margin-top:18px;
+}
+.section h2 { margin:0 0 8px; font-size:1.25rem; }
+.section p { margin:6px 0 10px; }
+.muted { color:var(--muted); }
+.actions { display:flex; gap:10px; flex-wrap:wrap; margin:12px 0; }
+
+/* ---------- Aromas ---------- */
+.aroma-preview { margin-top:12px; }
+.aroma-preview img {
+  width:100%; max-height:300px; object-fit:cover;
+  border-radius:12px; border:1px solid var(--border);
+}
+.aromas-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px; margin-top:12px;
+}
+.aroma-card {
+  background:
+    linear-gradient(140deg,rgba(255,255,255,.02),transparent) padding-box,
+    radial-gradient(600px 220px at -20% -20%, var(--tone,#00c2ff) 18%, transparent) border-box,
+    var(--panel2);
+  border:1px solid var(--border); border-radius:16px; padding:16px;
+  box-shadow:0 10px 26px rgba(0,0,0,.32);
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.aroma-card:hover {
+  transform:translateY(-3px);
+  box-shadow:0 16px 34px rgba(0,0,0,.36);
+  border-color:color-mix(in oklab, var(--tone,#00c2ff) 40%, var(--border));
+}
+.aroma-head { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:6px; }
+.aroma-head h3 { margin:0; font-size:1.08rem; }
+.pill {
+  display:inline-block; padding:4px 10px; border-radius:999px;
+  border:1px solid #2a3445; background:#111826; color:#cfe2ff; font-size:.85rem;
+}
+.aroma-notes { margin:4px 0 12px; color:#c9d7ea; font-size:.95rem; }
+.aroma-actions { display:flex; gap:10px; align-items:center; }
+
+/* ---------- Galeria + Vídeos ---------- */
+.media-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:14px; margin-top:12px;
+}
+.media-grid figure {
+  margin:0; background:var(--panel2); border:1px solid var(--border);
+  border-radius:14px; overflow:hidden; box-shadow:0 8px 22px rgba(0,0,0,.25);
+}
+.media-grid img { width:100%; height:170px; object-fit:cover; display:block; }
+.media-grid figcaption { padding:10px 12px; color:var(--muted); font-size:.92rem; }
+.video-embed {
+  position:relative; padding-bottom:56.25%; height:0; overflow:hidden;
+  border-radius:14px; border:1px solid var(--border); background:var(--panel2);
+  box-shadow:0 8px 22px rgba(0,0,0,.25);
+}
+.video-embed iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+/* ---------- Narração ---------- */
+.narration-card {
+  margin-top:14px; padding:16px; border:1px solid var(--border);
+  border-radius:14px; background:var(--panel2); box-shadow:0 8px 22px rgba(0,0,0,.25);
+}
+.narration-card h3 { margin:0 0 6px; }
+.narration-actions { display:flex; gap:10px; margin-top:10px; }
+
+/* ---------- Footer ---------- */
+.footer { text-align:center; color:var(--muted); padding:28px 0; }
