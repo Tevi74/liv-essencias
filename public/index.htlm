@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Liv Essências – AR</title>
+  <link rel="icon" href="/assets/global/logo.png">
+  <link rel="stylesheet" href="/assets/global/styles.css">
+  <meta name="description" content="Experiências AR das fragrâncias Liv Essências e Liv Kamp Gel.">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="/assets/global/logo.png" alt="Liv" class="logo">
+      <h1>Liv Essências – Realidade Aumentada</h1>
+    </header>
+
+    <section class="card">
+      <h2>Escolha a experiência</h2>
+      <div class="grid">
+        <a class="city" href="/cities/barcelona/"><h3>Barcelona</h3><span class="badge">AR</span></a>
+        <a class="city" href="/cities/paris/"><h3>Paris</h3><span class="badge">AR</span></a>
+        <a class="city" href="/cities/milao/"><h3>Milão</h3><span class="badge">AR</span></a>
+        <a class="city" href="/cities/marrakech/"><h3>Marrakech</h3><span class="badge">AR</span></a>
+        <a class="city" href="/cities/kenya/"><h3>Kenya</h3><span class="badge">AR</span></a>
+        <a class="city" href="/cities/lisboa/"><h3>Lisboa</h3><span class="badge">AR</span></a>
+        <a class="city" href="/cities/buenos-aires/"><h3>Buenos Aires</h3><span class="badge">AR</span></a>
+        <a class="city" href="/cities/berlim/"><h3>Berlim</h3><span class="badge">AR</span></a>
+        <a class="city" href="/cities/nova-york/"><h3>Nova York</h3><span class="badge">AR</span></a>
+        <a class="city" href="/cities/amazonia/"><h3>Amazônia</h3><span class="badge">AR</span></a>
+        <a class="city" href="/cities/toquio/"><h3>Tóquio</h3><span class="badge">AR</span></a>
+        <a class="city" href="/liv-kamp/"><h3>Liv Kamp Gel</h3><span class="badge">360°</span></a>
+      </div>
+    </section>
+
+    <footer class="footer">© 2025 Liv Essências</footer>
+  </div>
+
+  <script src="/assets/global/main.js"></script>
+</body>
+</html>
