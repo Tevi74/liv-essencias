@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gel Liv Kamp – Alívio Natural da Dor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header-wrap">
+    <header class="container header">
+      <div class="brand">
+        <img src="assets/logo-liv.png" alt="Liv Essências" class="logo" />
+        <div>
+          <h1 class="site-title">Gel Liv Kamp</h1>
+          <p class="site-subtitle">Alívio Natural da Dor</p>
+        </div>
+      </div>
+      <span class="pill">100% natural</span>
+    </header>
+  </div>
+
+  <!-- HERO -->
+  <section class="container hero card-soft">
+    <div class="hero-copy">
+      <h2>Alívio Natural e Eficaz para suas Dores</h2>
+      <p class="muted">
+        Descubra o poder dos ingredientes naturais: óleo de sucupira, cânfora e arnica
+        trabalhando juntos para proporcionar <strong>ruptura imediata e duradoura</strong>.
+      </p>
+      <div class="badges">
+        <span class="badge">Anti-inflamatório</span>
+        <span class="badge">Ação Rápida</span>
+        <span class="badge">Relaxante</span>
+      </div>
+    </div>
+
+    <figure class="media-card center keep-space">
+      <img src="assets/gel.png" alt="Frasco do Gel Liv Kamp" />
+    </figure>
+  </section>
+
+  <!-- ÁUDIO DO GEL -->
+  <section class="container block">
+    <h3>Áudio Explicativo – Aplicação do Liv Kamp Gel</h3>
+    <div class="audio-box">
+      <audio id="gelAudio" class="audio-player" controls src="assets/explicacao.mp3"></audio>
+    </div>
+  </section>
+
+  <!-- PONTOS DE ACUPUNTURA (IMAGEM ESTÁTICA) + ÁUDIO -->
+  <section class="container block">
+    <h3>Pontos de Acupuntura (Imagem)</h3>
+    <p class="muted">Imagem ilustrativa para referência dos pontos.</p>
+
+    <div class="viz-card">
+      <figure class="media-card center viz-keep">
+        <img class="meridianos-img" src="assets/meridianos-3d.png" alt="Meridianos ilustrados" />
+      </figure>
+
+      <div class="audio-360">
+        <span class="audio-title">Áudio Explicativo - Pontos de Acupuntura e Autocuidado</span>
+        <audio id="acuAudio" class="audio-player" controls src="assets/meridianos-explicacao.mp3"></audio>
+      </div>
+
+      <div class="notice warning">
+        <strong>Importante - Orientação Profissional</strong><br />
+        Este conteúdo é apenas para fins educativos e de autocuidado.<br /><br />
+        • Para acupuntura tradicional, procure sempre um profissional habilitado<br />
+        • Em caso de dores persistentes ou condições de saúde, consulte um médico<br />
+        • O Liv Kamp Gel é um auxiliar no bem-estar, não substitui tratamentos médicos.
+      </div>
+    </div>
+
+    <!-- Abas ANTERIOR / POSTERIOR -->
+    <div class="tabs">
+      <button class="tab-btn active" data-side="front">Visão Frontal</button>
+      <button class="tab-btn" data-side="back">Visão Posterior</button>
+    </div>
+
+    <!-- Corpo + Painel -->
+    <div class="viz-wrap">
+      <figure class="body-canvas keep-space">
+        <img id="body-image" src="assets/body-front.png" alt="Figura anatômica" />
+
+        <!-- ANTERIOR (sem duplicar abdômen; cabeça removida; TÓRAX correto) -->
+        <button class="pin" data-side="front" style="left:50%; top:29%;"  data-id="front-torax"          title="Tórax (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:50%; top:47%;"  data-id="front-abdomen"        title="Abdômen (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:33%; top:36%;"  data-id="front-ombro-dir"       title="Ombro Direito (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:67%; top:36%;"  data-id="front-ombro-esq"       title="Ombro Esquerdo (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:44%; top:66%;"  data-id="front-quadriceps-dir"  title="Qudriceps (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:56%; top:66%;"  data-id="front-quadriceps-esq"  title="Quadriceps (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:42%; top:76%;"  data-id="front-joelho-dir"      title="Joelho Direito (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:58%; top:76%;"  data-id="front-joelho-esq"      title="Joelho Esquerdo (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:25%; top:54%;"  data-id="front-pulso-dir"       title="Pulso Direito (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:75%; top:54%;"  data-id="front-pulso-esq"       title="Pulso Esquerdo (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:45%; top:92%;"  data-id="front-tornozelo-dir"   title="Tornozelo Direito (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:55%; top:92%;"  data-id="front-tornozelo-esq"   title="Tornozelo Esquerdo (Anterior)"></button>
+
+        <!-- POSTERIOR -->
+        <button class="pin hidden" data-side="back" style="left:50%; top:12%;" data-id="back-nuca"             title="Nuca (Posterior)"></button>
+        <button class="pin hidden" data-side="back" style="left:45%; top:20%;" data-id="back-escapula-dir"     title="Escápula Direita (Posterior)"></button>
+        <button class="pin hidden" data-side="back" style="left:56%; top:20%;" data-id="back-escapula-esq"     title="Escápula Esquerda (Posterior)"></button>
+        <button class="pin hidden" data-side="back" style="left:50%; top:40%;" data-id="back-lombar"           title="Lombar (Posterior)"></button>
+        <button class="pin hidden" data-side="back" style="left:45%; top:78%;" data-id="back-panturrilha-dir"  title="Panturrilha Direita (Posterior)"></button>
+        <button class="pin hidden" data-side="back" style="left:55%; top:78%;" data-id="back-panturrilha-esq"  title="Panturrilha Esquerda (Posterior)"></button>
+        <button class="pin hidden" data-side="back" style="left:45%; top:92%;" data-id="back-tornozelo-dir"    title="Tornozelo Direito (Posterior)"></button>
+        <button class="pin hidden" data-side="back" style="left:55%; top:92%;" data-id="back-tornozelo-esq"    title="Tornozelo Esquerdo (Posterior)"></button>
+      </figure>
+
+      <!-- PAINEL -->
+      <aside class="panel">
+        <div class="panel-empty" id="panel-empty">
+          <div class="target">🎯</div>
+          <p>Clique em um ponto vermelho para ver a explicação completa.</p>
+        </div>
+
+        <!-- ====== ANTERIOR ====== -->
+        <article class="card hidden" id="front-torax">
+          <h4>Tórax (Anterior)</h4>
+          <p class="lead">Pele limpa e seca. Massageie suavemente até completa absorção.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia • até 2 semanas</li>
+            <li><span>Técnica</span>Movimentos circulares, no sentido do coração</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="front-abdomen">
+          <h4>Abdômen (Anterior)</h4>
+          <p class="lead">Aplicar em desconfortos musculares leves na região.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Técnica</span>Camada fina; massagem suave até absorver</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="front-ombro-dir">
+          <h4>Ombro Direito</h4>
+          <p class="lead">Tensão e dor muscular/articular.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Massageie em direção ao pescoço/escápula</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="front-ombro-esq">
+          <h4>Ombro Esquerdo</h4>
+          <p class="lead">Tensão e dor muscular/articular.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Massageie em direção ao pescoço/escápula</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="front-quadriceps-dir">
+          <h4>Quadríceps Direito (Anterior)</h4>
+          <p class="lead">Dores articulares e sobrecarga.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Bolsa morna após a massagem</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="front-quadriceps-esq">
+          <h4>Quadríceps Esquerdo (Anterior)</h4>
+          <p class="lead">Dores articulares e sobrecarga.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Bolsa morna após a massagem</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="front-joelho-dir">
+          <h4>Joelho Direito</h4>
+          <p class="lead">Osteoartrose/sobrecarga.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Técnica</span>Ao redor da articulação</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="front-joelho-esq">
+          <h4>Joelho Esquerdo</h4>
+          <p class="lead">Osteoartrose/sobrecarga.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Técnica</span>Ao redor da articulação</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="front-pulso-dir">
+          <h4>Pulso Direito</h4>
+          <p class="lead">Tendinites/uso repetitivo.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Técnica</span>Camada fina + movimentos circulares</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="front-pulso-esq">
+          <h4>Pulso Esquerdo</h4>
+          <p class="lead">Tendinites/uso repetitivo.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Técnica</span>Camada fina + movimentos circulares</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="front-tornozelo-dir">
+          <h4>Tornozelo Direito</h4>
+          <p class="lead">Entorses leves/contusões.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Eleve o membro e descanse</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="front-tornozelo-esq">
+          <h4>Tornozelo Esquerdo</h4>
+          <p class="lead">Entorses leves/contusões.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Eleve o membro e descanse</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <!-- ====== POSTERIOR ====== -->
+        <article class="card hidden" id="back-nuca">
+          <h4>Nuca</h4>
+          <p class="lead">Torcicolo e tensão cervical.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Técnica</span>Movimentos ascendentes suaves</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="back-escapula-dir">
+          <h4>Escápula Direita</h4>
+          <p class="lead">Tensão postural.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Associe alongamentos leves</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="back-escapula-esq">
+          <h4>Escápula Esquerda</h4>
+          <p class="lead">Tensão postural.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Associe alongamentos leves</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="back-lombar">
+          <h4>Lombar</h4>
+          <p class="lead">Tensão muscular/esforço físico.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Bolsa morna após a massagem</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="back-panturrilha-dir">
+          <h4>Panturrilha Direita</h4>
+          <p class="lead">Cãibras/sobrecarga pós-treino.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Hidrate-se e alongue</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="back-panturrilha-esq">
+          <h4>Panturrilha Esquerda</h4>
+          <p class="lead">Cãibras/sobrecarga pós-treino.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Hidrate-se e alongue</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="back-tornozelo-dir">
+          <h4>Tornozelo Direito (Posterior)</h4>
+          <p class="lead">Entorses/contusões.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Eleve o membro e descanse</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+        <article class="card hidden" id="back-tornozelo-esq">
+          <h4>Tornozelo Esquerdo (Posterior)</h4>
+          <p class="lead">Entorses/contusões.</p>
+          <ul class="info">
+            <li><span>Frequência</span>3–4 aplicações/dia</li>
+            <li><span>Dica</span>Eleve o membro e descanse</li>
+          </ul>
+          <ul class="tips">
+            <li>Lave bem as mãos antes e após a aplicação</li>
+            <li>Aplique sobre a pele limpa e seca</li>
+            <li>Evite contato com olhos e mucosas</li>
+            <li>Não aplique em pele irritada ou lesionada</li>
+            <li>Mantenha fora do alcance de crianças e animais</li>
+          </ul>
+        </article>
+
+      </aside>
+    </div>
+  </section>
+
+  <!-- GUIA DE APLICAÇÃO (COMPLETO) -->
+  <section class="container block">
+    <h3>Como aplicar e potencializar o efeito</h3>
+
+    <div class="card">
+      <p class="lead">
+        Pode aplicar gel corporal para alívio da dor em áreas como joelhos, ombros, pulsos, costas, pescoço e outras articulações,
+        bem como em músculos tensos, contusões e lesões menores. É importante aplicar o gel sobre a pele limpa e seca,
+        massageando suavemente até à completa absorção e evitando aplicar em mucosas, olhos ou pele ferida.
+      </p>
+
+      <ul class="info">
+        <li><span>Frequência & Duração</span>Recomendado 3–4 aplicações por dia. Alternativamente, 2x/dia (manhã e noite). Pode ser utilizado por até 2 semanas.</li>
+        <li><span>Locais comuns</span>Articulações (joelhos, ombros, pulsos, tornozelos, ancas e dedos), músculos (costas, pescoço/torcicolo) e lesões menores (contusões/hematomas).</li>
+      </ul>
+
+      <h4>Dicas para a Aplicação</h4>
+      <ul class="tips">
+        <li><strong>Crie um ambiente relaxante:</strong> local tranquilo e confortável, luz suave e música relaxante.</li>
+        <li><strong>Prepare a pele:</strong> pele limpa e seca para melhor absorção.</li>
+        <li><strong>Aplique suavemente:</strong> pequena quantidade na área afetada.</li>
+        <li><strong>Massagem eficaz:</strong> movimentos circulares e firmes, sempre no sentido do coração.</li>
+        <li><strong>Até a absorção:</strong> continue a massagem até total absorção.</li>
+        <li><strong>Combine com calor:</strong> após a massagem, bolsa de água quente para prolongar os efeitos.</li>
+      </ul>
+
+      <h4>Instruções de Aplicação</h4>
+      <ol class="info">
+        <li><span>1. Prepare a Pele</span>Limpe a área onde sente dor.</li>
+        <li><span>2. Aplique o Gel</span>Coloque uma pequena quantidade na área afetada.</li>
+        <li><span>3. Massageie</span>Movimentos circulares, lentamente, até completa absorção.</li>
+        <li><span>4. Repita se necessário</span>Várias vezes ao dia conforme intensidade da dor.</li>
+      </ol>
+
+      <div class="notice danger" role="alert" aria-live="polite">
+        <h4 style="margin:0 0 6px 0;">Cuidados e Precauções (LEIA COM ATENÇÃO)</h4>
+        <ul class="tips">
+          <li><strong>Uso externo:</strong> apenas sobre a pele.</li>
+          <li><strong>Evite mucosas:</strong> não usar próximo aos olhos e outras mucosas; não inalar.</li>
+          <li><strong>Pele íntegra:</strong> não aplicar em feridas abertas ou pele danificada/irritada.</li>
+          <li><strong>Alergias:</strong> se ocorrer irritação/reação alérgica, interrompa o uso e procure um médico.</li>
+          <li><strong>Crianças e bebês:</strong> usar com precaução; cânfora/mentol podem causar reações adversas.</li>
+          <li><strong>Gestantes e lactantes:</strong> não utilizar.</li>
+          <li><strong>Doenças hepáticas/renais:</strong> não utilizar.</li>
+          <li><strong>Consultar um profissional:</strong> se a dor persistir ou houver dúvidas, procure médico ou farmacêutico.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÚSICAS RELAXANTES -->
+  <section class="music-wrap">
+    <div class="container">
+      <h3>Músicas Relaxantes Liv Essências</h3>
+      <p class="muted">Seleção de músicas tranquilas para acompanhar seus momentos de relaxamento e bem-estar.</p>
+
+      <div class="player">
+        <div id="track-title">Brancura Serenata</div>
+        <div class="controls">
+          <button id="prevBtn">⏮ Anterior</button>
+          <button id="playPauseBtn" class="btn-primary">▶ Tocar</button>
+          <button id="nextBtn">⏭ Próxima</button>
+        </div>
+        <audio id="relaxAudio"></audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <img src="assets/logo-liv.png" alt="Liv Essências" class="logo" />
+        <div><strong>Produtos naturais</strong> para o seu bem-estar e qualidade de vida.</div>
+      </div>
+
+      <div class="contact">
+        <h5>Contato</h5>
+        <a href="mailto:contato@livessencias.com.br">contato@livessencias.com.br</a><br />
+        <a href="tel:+5511945993726">(11) 94599-3726</a><br />
+        <a href="http://www.livessencias.com.br" target="_blank" rel="noopener">www.livessencias.com.br</a>
+      </div>
+
+      <div class="legal muted small">
+        Importante: Este produto não substitui orientação médica. Em caso de dor persistente,
+        consulte um profissional de saúde. Mantenha fora do alcance de crianças.
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
