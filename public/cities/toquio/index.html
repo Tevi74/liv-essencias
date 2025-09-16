@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Liv Essências — Tóquio</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/cities/toquio/style.css?v=3">
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
   <header class="hero">
-    <img src="/assets/logo-liv.png" alt="Logo Liv Essências" class="hero-logo" />
+    <img src="/cities/toquio/imagens/logo-liv.png" alt="Logo Liv Essências" class="hero-logo" />
     <h1>Liv Tóquio</h1>
     <p>Imersão sensorial em Tóquio — tradição, tecnologia, templos e neon.</p>
     <div class="hero-actions">
@@ -22,7 +22,7 @@
   <section class="scene-wrap">
     <a-scene embedded>
       <!-- inicia com o pôster de Tóquio -->
-      <a-sky id="sky360" src="/assets/toquio-poster.png" rotation="0 -90 0"></a-sky>
+      <a-sky id="sky360" src="/cities/toquio/imagens/toquio-poster.png" rotation="0 -90 0"></a-sky>
       <a-entity camera look-controls></a-entity>
     </a-scene>
   </section>
@@ -60,8 +60,8 @@
           <p class="aroma-notes">Brisa do rio, cítricos leves, ar limpo</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
-              data-audio="/assets/audio-brisa.mp3"
-              data-img="/assets/brisa-toquio.png">Inspire</button>
+              data-audio="/cities/toquio/audios/audio-brisa.mp3"
+              data-img="/cities/toquio/imagens/brisa-toquio.png">Inspire</button>
           </div>
         </div>
 
@@ -73,8 +73,8 @@
           <p class="aroma-notes">Sakurá, pétalas úmidas, toque de arroz</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
-              data-audio="/assets/audio-sakura.mp3"
-              data-img="/assets/sakura-toquio.png">Inspire</button>
+              data-audio="/cities/toquio/audios/audio-sakura.mp3"
+              data-img="/cities/toquio/imagens/sakura-toquio.png">Inspire</button>
           </div>
         </div>
 
@@ -86,8 +86,8 @@
           <p class="aroma-notes">Matchá, notas verdes, madeira clara</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
-              data-audio="/assets/cha-verde-toquio.mp3"
-              data-img="/assets/aroma-cha-verde.png">Inspire</button>
+              data-audio="/cities/toquio/audios/cha-verde-toquio.mp3"
+              data-img="/cities/toquio/imagens/aroma-cha-verde.png">Inspire</button>
           </div>
         </div>
       </div>
@@ -97,10 +97,10 @@
     <section class="section">
       <h2>Galeria Tóquio</h2>
       <div class="media-grid">
-        <figure><img src="/assets/shibuya.png" alt="Shibuya"><figcaption>Shibuya</figcaption></figure>
-        <figure><img src="/assets/senso-ji.png" alt="Sensō-ji"><figcaption>Sensō-ji</figcaption></figure>
-        <figure><img src="/assets/skytree.png" alt="Tokyo Skytree"><figcaption>Tokyo Skytree</figcaption></figure>
-        <figure><img src="/assets/shinjuku.png" alt="Shinjuku"><figcaption>Shinjuku</figcaption></figure>
+        <figure><img src="/cities/toquio/imagens/shibuya.png" alt="Shibuya"><figcaption>Shibuya</figcaption></figure>
+        <figure><img src="/cities/toquio/imagens/senso-ji.png" alt="Sensō-ji"><figcaption>Sensō-ji</figcaption></figure>
+        <figure><img src="/cities/toquio/imagens/skytree.png" alt="Tokyo Skytree"><figcaption>Tokyo Skytree</figcaption></figure>
+        <figure><img src="/cities/toquio/imagens/shinjuku.png" alt="Shinjuku"><figcaption>Shinjuku</figcaption></figure>
       </div>
 
       <!-- Narração — Tóquio -->
@@ -113,7 +113,7 @@
           <button class="btn" id="narStop">Stop</button>
         </div>
         <audio id="narAudio" preload="auto">
-          <source src="/assets/toquio.mp3?v=2" type="audio/mpeg" />
+          <source src="/cities/toquio/audios/toquio.mp3?v=2" type="audio/mpeg" />
         </audio>
       </div>
     </section>
@@ -148,7 +148,7 @@
 
 
   <!-- Áudios -->
-  <audio id="bgAudio" loop preload="auto"><source src="/assets/musica.mp3" type="audio/mpeg"></audio>
+  <audio id="bgAudio" loop preload="auto"><source src="/cities/toquio/audios/musica.mp3" type="audio/mpeg"></audio>
   <audio id="aromaAudio" preload="auto"></audio>
 
   <footer class="footer"><small>© Liv Essências — Tóquio</small></footer>
@@ -169,11 +169,11 @@
     // 360 — cenas
     const sky = document.getElementById("sky360");
     const setSky = (src) => sky.setAttribute("src", src);
-    document.getElementById("scene-shibuya").onclick  = () => setSky("/assets/shibuya.png");
-    document.getElementById("scene-sensoji").onclick  = () => setSky("/assets/senso-ji.png");
-    document.getElementById("scene-skytree").onclick  = () => setSky("/assets/skytree.png");
-    document.getElementById("scene-shinjuku").onclick = () => setSky("/assets/shinjuku.png");
-    document.getElementById("scene-poster").onclick   = () => setSky("/assets/toquio-poster.png");
+    document.getElementById("scene-shibuya").onclick  = () => setSky("/cities/toquio/imagens/shibuya.png");
+    document.getElementById("scene-sensoji").onclick  = () => setSky("/cities/toquio/imagens/senso-ji.png");
+    document.getElementById("scene-skytree").onclick  = () => setSky("/cities/toquio/imagens/skytree.png");
+    document.getElementById("scene-shinjuku").onclick = () => setSky("/cities/toquio/imagens/shinjuku.png");
+    document.getElementById("scene-poster").onclick   = () => setSky("/cities/toquio/imagens/toquio-poster.png");
 
     // Aromas
     const aromaAudio = document.getElementById('aromaAudio');
