@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Liv Essências — Amazônia</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/cities/amazonia/style.css?v=3">
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
   <header class="hero">
-    <img src="/assets/logo-liv.png" alt="Logo Liv Essências" class="hero-logo" />
+    <img src="/cities/amazonia/imagens/logo-liv.png" alt="Logo Liv Essências" class="hero-logo" />
     <h1>Liv Marrakech</h1>
     <p>Entre floresta, aromas de plantas e frutas, Amazônia pulsa em cores e sentidos.</p>
     <div class="hero-actions">
@@ -21,7 +21,7 @@
   <!-- CENA 360º -->
   <section class="scene-wrap">
     <a-scene embedded>
-      <a-sky id="sky360" src="/assets/amazonia-poster.png" rotation="0 -90 0"></a-sky>
+      <a-sky id="sky360" src="/cities/amazonia/imagens/amazonia-poster.png" rotation="0 -90 0"></a-sky>
       <a-entity camera look-controls></a-entity>
     </a-scene>
   </section>
@@ -57,8 +57,8 @@
           <p class="aroma-notes">Copaiba</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
-              data-audio="/assets/copaiba-amazonia.mp3"
-              data-img="/assets/copaiba-amazonia.png">Inspire</button>
+              data-audio="/cities/amazonia/audios/copaiba-amazonia.mp3"
+              data-img="/cities/amazonia/imagens/copaiba-amazonia.png">Inspire</button>
           </div>
         </div>
 
@@ -69,8 +69,8 @@
           <p class="aroma-notes">guarana,</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
-              data-audio="/assets/guarana.mp3"
-              data-img="/assets/guarana-amazonia.png">Inspire</button>
+              data-audio="/cities/amazonia/audios/guarana.mp3"
+              data-img="/cities/amazonia/imagens/guarana-amazonia.png">Inspire</button>
           </div>
         </div>
 
@@ -81,8 +81,8 @@
           <p class="aroma-cupuaçu">mistura de chocolate e abacaxi</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
-              data-audio="/assets/cupuacu.mp3"
-              data-img="/assets/cupuacu-amazonia.png">Inspire</button>
+              data-audio="/cities/amazonia/audios/cupuacu.mp3"
+              data-img="/cities/amazonia/imagens/cupuacu-amazonia.png">Inspire</button>
           </div>
         </div>
       </div>
@@ -92,10 +92,10 @@
     <section class="section">
       <h2>Galeria Amazônia</h2>
       <div class="media-grid">
-        <figure><img src="/assets/encontro das águas.png" alt="Encontro das águas"><figcaption>Encontro das águas</figcaption></figure>
-        <figure><img src="/assets/Arquipelago de Anavilhana.png" alt="Arquipelago de Anavilhana"><figcaption>Arquipelago de Anavilhana</figcaption></figure>
-        <figure><img src="/assets/Praia Ponta Negra.png" alt="Praia Ponta Negra"><figcaption>Praia Ponta Negra</figcaption></figure>
-        <figure><img src="/assets/Teatro Amazonas.png" alt="Teatro Amazonas"><figcaption>Teatro Amazonas</figcaption></figure>
+        <figure><img src="/cities/amazonia/imagens/encontro das águas.png" alt="Encontro das águas"><figcaption>Encontro das águas</figcaption></figure>
+        <figure><img src="/cities/amazonia/imagens/Arquipelago de Anavilhana.png" alt="Arquipelago de Anavilhana"><figcaption>Arquipelago de Anavilhana</figcaption></figure>
+        <figure><img src="/cities/amazonia/imagens/Praia Ponta Negra.png" alt="Praia Ponta Negra"><figcaption>Praia Ponta Negra</figcaption></figure>
+        <figure><img src="/cities/amazonia/imagens/Teatro Amazonas.png" alt="Teatro Amazonas"><figcaption>Teatro Amazonas</figcaption></figure>
       </div>
 
       <div class="narration-card">
@@ -107,7 +107,7 @@
           <button class="btn" id="narStop">Stop</button>
         </div>
         <audio id="narAudio" preload="auto">
-          <source src="/assets/amazonia.mp3?v=2" type="audio/mpeg" />
+          <source src="/cities/amazonia/audios/amazonia.mp3?v=2" type="audio/mpeg" />
         </audio>
       </div>
     </section>
@@ -141,7 +141,7 @@
     </section>
   </main>
 
-  <audio id="bgAudio" loop preload="auto"><source src="/assets/musica.mp3" type="audio/mpeg"></audio>
+  <audio id="bgAudio" loop preload="auto"><source src="/cities/amazonia/audio/musica.mp3" type="audio/mpeg"></audio>
   <audio id="aromaAudio" preload="auto"></audio>
 
   <footer class="footer"><small>© Liv Essências — Marrakech</small></footer>
@@ -162,11 +162,11 @@
     // 360 — cenas
     const sky = document.getElementById("sky360");
     const setSky = (src) => sky.setAttribute("src", src);
-    document.getElementById("scene-encontro -das -aguas").onclick   = () => setSky("/assets/encontro-das-aguas.png");
-    document.getElementById("scene-arquipelago-de-anavilhana").onclick  = () => setSky("/assets/arquipelago-de-anavilhana.png");
-    document.getElementById("scene-praia-ponta-negra").onclick = () => setSky("/assets/praia-ponta-negra.png");
-    document.getElementById("scene-teatro-amazonas").onclick = () => setSky("/assets/teatro-amazonas.png");
-    document.getElementById("scene-poster").onclick  = () => setSky("/assets/marrakech-poster.png");
+    document.getElementById("scene-encontro -das -aguas").onclick   = () => setSky("/cities/amazonia/imagens/encontro-das-aguas.png");
+    document.getElementById("scene-arquipelago-de-anavilhana").onclick  = () => setSky("/cities/amazonia/imagens/arquipelago-de-anavilhana.png");
+    document.getElementById("scene-praia-ponta-negra").onclick = () => setSky("/cities/amazonia/imagens/praia-ponta-negra.png");
+    document.getElementById("scene-teatro-amazonas").onclick = () => setSky("/cities/amazonia/imagens/teatro-amazonas.png");
+    document.getElementById("scene-poster").onclick  = () => setSky("/cities/amazonia/imagens/amazonia-poster.png");
 
     // Aromas
     const aromaAudio = document.getElementById('aromaAudio');
