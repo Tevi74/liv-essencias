@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Liv Essências — Milão</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/cities/paris/style.css?v=3">
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
   <header class="hero">
-    <img src="/assets/logo-liv.png" alt="Logo Liv Essências" class="hero-logo" />
+    <img src="/cities/milao/imagens/logo-liv.png" alt="Logo Liv Essências" class="hero-logo" />
     <h1>Liv Milão</h1>
     <p>Moda, design e história — a elegância de Milão em uma imersão sensorial.</p>
     <div class="hero-actions">
@@ -21,7 +21,7 @@
   <!-- CENA 360º -->
   <section class="scene-wrap">
     <a-scene embedded>
-      <a-sky id="sky360" src="/assets/milao-poster.png" rotation="0 -90 0"></a-sky>
+      <a-sky id="sky360" src="/cities/milao/imagens/milao-poster.png" rotation="0 -90 0"></a-sky>
       <a-entity camera look-controls></a-entity>
     </a-scene>
   </section>
@@ -58,8 +58,8 @@
           <p class="aroma-notes">Ar limpo, cítricos leves, acorde urbano</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
-              data-audio="/assets/audio-brisa.mp3"
-              data-img="/assets/brisa-milao.png">Inspire</button>
+              data-audio="/cities/milao/audios/audio-brisa.mp3"
+              data-img="/cities/milao/imagens/brisa-milao.png">Inspire</button>
           </div>
         </div>
 
@@ -71,8 +71,8 @@
           <p class="aroma-notes">Íris, couro macio, almíscar limpo</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
-              data-audio="/assets/audio-iris-couro-milao.mp3"
-              data-img="/assets/iris-couro-milao.png">Inspire</button>
+              data-audio="/cities/milao/audios/audio-iris-couro-milao.mp3"
+              data-img="/cities/milao/imagens/iris-couro-milao.png">Inspire</button>
           </div>
         </div>
 
@@ -84,8 +84,8 @@
           <p class="aroma-notes">Café encorpado, cacau leve, madeira polida</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
-              data-audio="/assets/cafe-milao.mp3"
-              data-img="/assets/cafe-milao.png">Inspire</button>
+              data-audio="/cities/milao/audios/cafe-milao.mp3"
+              data-img="/cities/milao/imagens/cafe-milao.png">Inspire</button>
           </div>
         </div>
       </div>
@@ -95,10 +95,10 @@
     <section class="section">
       <h2>Galeria Milão</h2>
       <div class="media-grid">
-        <figure><img src="/assets/duomo.png" alt="Duomo"><figcaption>Duomo</figcaption></figure>
-        <figure><img src="/assets/navigli.png" alt="Navigli"><figcaption>Navigli</figcaption></figure>
-        <figure><img src="/assets/galleria-vittorio.png" alt="Galleria Vittorio Emanuele II"><figcaption>Galleria Vittorio Emanuele II</figcaption></figure>
-        <figure><img src="/assets/castello-sforzesco.png" alt="Castello Sforzesco"><figcaption>Castello Sforzesco</figcaption></figure>
+        <figure><img src="/cities/milao/imagens/duomo.png" alt="Duomo"><figcaption>Duomo</figcaption></figure>
+        <figure><img src="/cities/milao/imagens/navigli.png" alt="Navigli"><figcaption>Navigli</figcaption></figure>
+        <figure><img src="/cities/milao/imagens/galleria-vittorio.png" alt="Galleria Vittorio Emanuele II"><figcaption>Galleria Vittorio Emanuele II</figcaption></figure>
+        <figure><img src="/cities/milao/imagens/castello-sforzesco.png" alt="Castello Sforzesco"><figcaption>Castello Sforzesco</figcaption></figure>
       </div>
 
       <!-- Narração — Milão -->
@@ -111,7 +111,7 @@
           <button class="btn" id="narStop">Stop</button>
         </div>
         <audio id="narAudio" preload="auto">
-          <source src="/assets/milao.mp3?v=2" type="audio/mpeg" />
+          <source src="/cities/milao/audios/milao.mp3?v=2" type="audio/mpeg" />
         </audio>
       </div>
     </section>
@@ -146,7 +146,7 @@
 
 
   <!-- Áudios -->
-  <audio id="bgAudio" loop preload="auto"><source src="/assets/musica.mp3" type="audio/mpeg"></audio>
+  <audio id="bgAudio" loop preload="auto"><source src="/cities/milao/audios/musica.mp3" type="audio/mpeg"></audio>
   <audio id="aromaAudio" preload="auto"></audio>
 
   <footer class="footer"><small>© Liv Essências — Milão</small></footer>
@@ -167,11 +167,11 @@
     // 360 — cenas
     const sky = document.getElementById("sky360");
     const setSky = (src) => sky.setAttribute("src", src);
-    document.getElementById("scene-duomo").onclick    = () => setSky("/assets/duomo.png");
-    document.getElementById("scene-navigli").onclick  = () => setSky("/assets/navigli.png");
-    document.getElementById("scene-galleria").onclick = () => setSky("/assets/galleria-vittorio.png");
-    document.getElementById("scene-castello").onclick = () => setSky("/assets/castello-sforzesco.png");
-    document.getElementById("scene-poster").onclick   = () => setSky("/assets/milao-poster.png");
+    document.getElementById("scene-duomo").onclick    = () => setSky("/cities/milao/imagens/duomo.png");
+    document.getElementById("scene-navigli").onclick  = () => setSky("/cities/milao/imagens/navigli.png");
+    document.getElementById("scene-galleria").onclick = () => setSky("/cities/milao/imagens/galleria-vittorio.png");
+    document.getElementById("scene-castello").onclick = () => setSky("/cities/milao/imagens/castello-sforzesco.png");
+    document.getElementById("scene-poster").onclick   = () => setSky("/cities/milao/imagens/milao-poster.png");
 
     // Aromas
     const aromaAudio = document.getElementById('aromaAudio');
