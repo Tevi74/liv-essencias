@@ -4,14 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Liv Essências — Amazônia</title>
-  <link rel="stylesheet" href="/cities/amazonia/style.css?v=3">
+
+  <!-- (opcional) base global -->
+  <!-- <link rel="stylesheet" href="/assets/global/styles.css"> -->
+
+  <!-- CSS local da Amazônia -->
+  <link rel="stylesheet" href="/cities/amazonia/style.css?v=4">
+
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
   <header class="hero">
     <img src="/cities/amazonia/imagens/logo-liv.png" alt="Logo Liv Essências" class="hero-logo" />
-    <h1>Liv Amazonia</h1>
-    <p>Entre floresta, aromas de plantas e frutas, Amazônia pulsa em cores e sentidos.</p>
+    <h1>Liv Amazônia</h1>
+    <p>Entre floresta, aromas de plantas e frutas, a Amazônia pulsa em cores e sentidos.</p>
     <div class="hero-actions">
       <button id="btnAudio" class="btn btn-primary">Tocar Som</button>
       <button id="btnAudioStop" class="btn">Stop</button>
@@ -28,14 +34,14 @@
 
   <main class="container">
     <section class="section">
-      <h2>Marrakech</h2>
-      <p>Encontro das áuas, Floresta, tradição, espiritualidade e exotismo em cada detalhe.</p>
+      <h2>Amazônia</h2>
+      <p>Encontro das águas, floresta viva, tradição, espiritualidade e biodiversidade única.</p>
 
       <div class="actions">
-        <button id="scene-encontro-das-aguas" class="btn">encntro-das-aguas</button>
-        <button id="scene-arquipelago-de-anavilhanas" class="btn">arquipelago-de-anavilhanas</button>
-        <button id="scene-praia-da-ponta-negra" class="btn">praia-da-ponta-negra</button>
-        <button id="scene-teatro-amazonas" class="btn">Teatro-Amazonas</button>
+        <button id="scene-encontro-das-aguas" class="btn">Encontro das Águas</button>
+        <button id="scene-arquipelago-de-anavilhana" class="btn">Arquipélago de Anavilhanas</button>
+        <button id="scene-praia-da-ponta-negra" class="btn">Praia da Ponta Negra</button>
+        <button id="scene-teatro-amazonia" class="btn">Teatro Amazonas</button>
         <button id="scene-poster" class="btn btn-ghost">Pôster</button>
       </div>
     </section>
@@ -43,7 +49,7 @@
     <!-- Aromas -->
     <section class="section" id="aromas">
       <h2>Aromas de Amazônia</h2>
-      <p class="muted"><em>“copaiba,óleos,cupuaçu,guaraná,essências típicas da Amazónia incluem óleos essenciais e vegetais.”</em></p>
+      <p class="muted"><em>“Copaíba, guaraná, cupuaçu — óleos e essências da floresta.”</em></p>
 
       <div id="aromaPreview" class="aroma-preview" hidden>
         <img id="aromaImg" src="" alt="Aroma visual">
@@ -52,9 +58,9 @@
       <div class="aromas-grid">
         <div class="aroma-card" style="--tone:#ff9933">
           <div class="aroma-head">
-            <h3>copaiba</h3><span class="pill">Intensidade</span>
+            <h3>Copaíba</h3><span class="pill">Intensidade</span>
           </div>
-          <p class="aroma-notes">Copaiba</p>
+          <p class="aroma-notes">Resina balsâmica, notas amadeiradas</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
               data-audio="/cities/amazonia/audios/copaiba-amazonia.mp3"
@@ -64,9 +70,9 @@
 
         <div class="aroma-card" style="--tone:#cc3366">
           <div class="aroma-head">
-            <h3>Guaraná</h3><span class="pill">Guaraná</span>
+            <h3>Guaraná</h3><span class="pill">Vigor</span>
           </div>
-          <p class="aroma-notes">guarana,</p>
+          <p class="aroma-notes">Sementes torradas, energia da mata</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
               data-audio="/cities/amazonia/audios/guarana.mp3"
@@ -76,9 +82,9 @@
 
         <div class="aroma-card" style="--tone:#996633">
           <div class="aroma-head">
-            <h3>cupuaçu</h3><span class="pill">fonte medicinal</span>
+            <h3>Cupuaçu</h3><span class="pill">Conforto</span>
           </div>
-          <p class="aroma-cupuaçu">mistura de chocolate e abacaxi</p>
+          <p class="aroma-notes">Cremoso, cacau amazônico, fruta doce</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
               data-audio="/cities/amazonia/audios/cupuacu.mp3"
@@ -92,10 +98,13 @@
     <section class="section">
       <h2>Galeria Amazônia</h2>
       <div class="media-grid">
-        <figure><img src="/cities/amazonia/imagens/encontro-das-aguas.png" alt="Encontro das águas"><figcaption>Encontro das águas</figcaption></figure>
-        <figure><img src="/cities/amazonia/imagens/arquipelago-de-anavilhana.png" alt="Arquipelago de Anavilhana"><figcaption>Arquipelago de Anavilhana</figcaption></figure>
-        <figure><img src="/cities/amazonia/imagens/praia=ponta-negra.png" alt="Praia Ponta Negra"><figcaption>Praia Ponta Negra</figcaption></figure>
-        <figure><img src="/cities/amazonia/imagens/teatro-amazonas.png" alt="Teatro Amazonas"><figcaption>Teatro Amazonas</figcaption></figure>
+        <figure><img src="/cities/amazonia/imagens/encontro-das-aguas.png" alt="Encontro das Águas"><figcaption>Encontro das Águas</figcaption></figure>
+        <figure><img src="/cities/amazonia/imagens/arquipelago-de-anavilhana.png" alt="Arquipélago de Anavilhanas"><figcaption>Arquipélago de Anavilhanas</figcaption></figure>
+        <figure><img src="/cities/amazonia/imagens/praia-da-ponta-negra.png" alt="Praia da Ponta Negra"><figcaption>Praia da Ponta Negra</figcaption></figure>
+        <!-- Se você NÃO renomear o arquivo e ele continuar com espaço:
+             use esta linha em vez da de cima:
+             <img src="/cities/amazonia/imagens/praia-%20da-ponta-negra.png" ...> -->
+        <figure><img src="/cities/amazonia/imagens/teatro-amazonia.png" alt="Teatro Amazonas"><figcaption>Teatro Amazonas</figcaption></figure>
       </div>
 
       <div class="narration-card">
@@ -117,21 +126,21 @@
       <h2>Vídeos — Amazônia</h2>
       <div class="media-grid">
         <div class="video-embed">
-          <iframe src="https://www.youtube.com/watch?v=OxOb5zTC6MA&list=RDOxOb5zTC6MA&start_radio=1"
+          <iframe src="https://www.youtube.com/embed/OxOb5zTC6MA"
             title="Vídeo 1 — Amazônia"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="video-embed">
-          <iframe src="https://www.youtube.com/watch?v=DNwvIQEXHP4"
+          <iframe src="https://www.youtube.com/embed/DNwvIQEXHP4"
             title="Vídeo 2 — Amazônia"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="video-embed">
-          <iframe src="https://www.youtube.com/watch?v=OByhSFzgGnA"
+          <iframe src="https://www.youtube.com/embed/OByhSFzgGnA"
             title="Vídeo 3 — Amazônia"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -141,10 +150,13 @@
     </section>
   </main>
 
-  <audio id="bgAudio" loop preload="auto"><source src="/cities/amazonia/audio/musica.mp3" type="audio/mpeg"></audio>
+  <!-- Áudios -->
+  <audio id="bgAudio" loop preload="auto">
+    <source src="/cities/amazonia/audios/musica.mp3" type="audio/mpeg">
+  </audio>
   <audio id="aromaAudio" preload="auto"></audio>
 
-  <footer class="footer"><small>© Liv Essências — Amazonia</small></footer>
+  <footer class="footer"><small>© Liv Essências — Amazônia</small></footer>
 
   <script>
     // Música geral
@@ -155,18 +167,23 @@
       let isPlaying = false;
       const upd = ()=> btn.textContent = isPlaying ? "Pausar Som" : "Tocar Som";
       btn.onclick = async () => { if (!isPlaying){ await bgAudio.play(); isPlaying = true; } else { bgAudio.pause(); isPlaying=false; } upd(); };
-      btnStop.onclick = () => { bgAudio.pause(); bgAudio.currentTime=0; isPlaying=false; upd(); };
+      btnStop.onclick = () => { bgAudio.pause(); bgAudio.currentTime=0; isPlaying=false; } ;
       upd();
     }
 
     // 360 — cenas
     const sky = document.getElementById("sky360");
     const setSky = (src) => sky.setAttribute("src", src);
-    document.getElementById("scene-encontro -das -aguas").onclick   = () => setSky("/cities/amazonia/imagens/encontro-das-aguas.png");
-    document.getElementById("scene-arquipelago-de-anavilhana").onclick  = () => setSky("/cities/amazonia/imagens/arquipelago-de-anavilhana.png");
-    document.getElementById("scene-praia-ponta-negra").onclick = () => setSky("/cities/amazonia/imagens/praia-ponta-negra.png");
-    document.getElementById("scene-teatro-amazonas").onclick = () => setSky("/cities/amazonia/imagens/teatro-amazonas.png");
-    document.getElementById("scene-poster").onclick  = () => setSky("/cities/amazonia/imagens/amazonia-poster.png");
+    document.getElementById("scene-encontro-das-aguas").onclick =
+      () => setSky("/cities/amazonia/imagens/encontro-das-aguas.png");
+    document.getElementById("scene-arquipelago-de-anavilhana").onclick =
+      () => setSky("/cities/amazonia/imagens/arquipelago-de-anavilhana.png");
+    document.getElementById("scene-praia-da-ponta-negra").onclick =
+      () => setSky("/cities/amazonia/imagens/praia-da-ponta-negra.png");
+    document.getElementById("scene-teatro-amazonia").onclick =
+      () => setSky("/cities/amazonia/imagens/teatro-amazonia.png");
+    document.getElementById("scene-poster").onclick =
+      () => setSky("/cities/amazonia/imagens/amazonia-poster.png");
 
     // Aromas
     const aromaAudio = document.getElementById('aromaAudio');
@@ -200,5 +217,3 @@
   </script>
 </body>
 </html>
-
-
