@@ -4,7 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gel Liv Kamp – Alívio Natural da Dor</title>
-  <link rel="stylesheet" href="/liv-kamp/style.css?v=3">
+  <!-- (opcional) base global -->
+  <!-- <link rel="stylesheet" href="/assets/global/styles.css"> -->
+  <link rel="stylesheet" href="/liv-kamp/style.css?v=4">
 </head>
 <body>
 
@@ -12,7 +14,7 @@
   <div class="header-wrap">
     <header class="container header">
       <div class="brand">
-        <img src="/liv-kamp/imagens/logo-liv.png" alt="Liv Essências" class="logo" />
+        <img src="/liv-kamp/imagens/logo.png" alt="Liv Essências" class="logo" />
         <div>
           <h1 class="site-title">Gel Liv Kamp</h1>
           <p class="site-subtitle">Alívio Natural da Dor</p>
@@ -28,7 +30,7 @@
       <h2>Alívio Natural e Eficaz para suas Dores</h2>
       <p class="muted">
         Descubra o poder dos ingredientes naturais: óleo de sucupira, cânfora e arnica
-        trabalhando juntos para proporcionar <strong>ruptura imediata e duradoura</strong>.
+        trabalhando juntos para proporcionar <strong>alívio rápido e duradouro</strong>.
       </p>
       <div class="badges">
         <span class="badge">Anti-inflamatório</span>
@@ -38,7 +40,7 @@
     </div>
 
     <figure class="media-card center keep-space">
-      <img src="liv-kamp/imagens/gel.png" alt="Frasco do Gel Liv Kamp" />
+      <img src="/liv-kamp/imagens/gel.png" alt="Frasco do Gel Liv Kamp" />
     </figure>
   </section>
 
@@ -46,23 +48,23 @@
   <section class="container block">
     <h3>Áudio Explicativo – Aplicação do Liv Kamp Gel</h3>
     <div class="audio-box">
-      <audio id="gelAudio" class="audio-player" controls src="liv-kamp/audios/explicacao.mp3"></audio>
+      <audio id="gelAudio" class="audio-player" controls src="/liv-kamp/audios/explicacao.mp3"></audio>
     </div>
   </section>
 
-  <!-- PONTOS DE ACUPUNTURA (IMAGEM ESTÁTICA) + ÁUDIO -->
+  <!-- PONTOS + ÁUDIO -->
   <section class="container block">
     <h3>Pontos de Acupuntura (Imagem)</h3>
     <p class="muted">Imagem ilustrativa para referência dos pontos.</p>
 
     <div class="viz-card">
       <figure class="media-card center viz-keep">
-        <img class="meridianos-img" src="liv-kamp/imagens/meridianos-3d.png" alt="Meridianos ilustrados" />
+        <img class="meridianos-img" src="/liv-kamp/imagens/meridianos-3d.png" alt="Meridianos ilustrados" />
       </figure>
 
       <div class="audio-360">
         <span class="audio-title">Áudio Explicativo - Pontos de Acupuntura e Autocuidado</span>
-        <audio id="acuAudio" class="audio-player" controls src="liv-kamp/audios/meridianos-explicacao.mp3"></audio>
+        <audio id="acuAudio" class="audio-player" controls src="/liv-kamp/audios/meridianos-explicacao.mp3"></audio>
       </div>
 
       <div class="notice warning">
@@ -74,7 +76,7 @@
       </div>
     </div>
 
-    <!-- Abas ANTERIOR / POSTERIOR -->
+    <!-- Abas -->
     <div class="tabs">
       <button class="tab-btn active" data-side="front">Visão Frontal</button>
       <button class="tab-btn" data-side="back">Visão Posterior</button>
@@ -83,21 +85,21 @@
     <!-- Corpo + Painel -->
     <div class="viz-wrap">
       <figure class="body-canvas keep-space">
-        <img id="body-image" src="liv-kamp/imagens/body-front.png" alt="Figura anatômica" />
+        <img id="body-image" src="/liv-kamp/imagens/body-front.png" alt="Figura anatômica" />
 
-        <!-- ANTERIOR (sem duplicar abdômen; cabeça removida; TÓRAX correto) -->
+        <!-- ANTERIOR -->
         <button class="pin" data-side="front" style="left:50%; top:29%;"  data-id="front-torax"          title="Tórax (Anterior)"></button>
         <button class="pin" data-side="front" style="left:50%; top:47%;"  data-id="front-abdomen"        title="Abdômen (Anterior)"></button>
-        <button class="pin" data-side="front" style="left:33%; top:36%;"  data-id="front-ombro-dir"       title="Ombro Direito (Anterior)"></button>
-        <button class="pin" data-side="front" style="left:67%; top:36%;"  data-id="front-ombro-esq"       title="Ombro Esquerdo (Anterior)"></button>
-        <button class="pin" data-side="front" style="left:44%; top:66%;"  data-id="front-quadriceps-dir"  title="Qudriceps (Anterior)"></button>
-        <button class="pin" data-side="front" style="left:56%; top:66%;"  data-id="front-quadriceps-esq"  title="Quadriceps (Anterior)"></button>
-        <button class="pin" data-side="front" style="left:42%; top:76%;"  data-id="front-joelho-dir"      title="Joelho Direito (Anterior)"></button>
-        <button class="pin" data-side="front" style="left:58%; top:76%;"  data-id="front-joelho-esq"      title="Joelho Esquerdo (Anterior)"></button>
-        <button class="pin" data-side="front" style="left:25%; top:54%;"  data-id="front-pulso-dir"       title="Pulso Direito (Anterior)"></button>
-        <button class="pin" data-side="front" style="left:75%; top:54%;"  data-id="front-pulso-esq"       title="Pulso Esquerdo (Anterior)"></button>
-        <button class="pin" data-side="front" style="left:45%; top:92%;"  data-id="front-tornozelo-dir"   title="Tornozelo Direito (Anterior)"></button>
-        <button class="pin" data-side="front" style="left:55%; top:92%;"  data-id="front-tornozelo-esq"   title="Tornozelo Esquerdo (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:33%; top:36%;"  data-id="front-ombro-dir"      title="Ombro Direito (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:67%; top:36%;"  data-id="front-ombro-esq"      title="Ombro Esquerdo (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:44%; top:66%;"  data-id="front-quadriceps-dir" title="Quadríceps Direito (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:56%; top:66%;"  data-id="front-quadriceps-esq" title="Quadríceps Esquerdo (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:42%; top:76%;"  data-id="front-joelho-dir"     title="Joelho Direito (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:58%; top:76%;"  data-id="front-joelho-esq"     title="Joelho Esquerdo (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:25%; top:54%;"  data-id="front-pulso-dir"      title="Pulso Direito (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:75%; top:54%;"  data-id="front-pulso-esq"      title="Pulso Esquerdo (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:45%; top:92%;"  data-id="front-tornozelo-dir"  title="Tornozelo Direito (Anterior)"></button>
+        <button class="pin" data-side="front" style="left:55%; top:92%;"  data-id="front-tornozelo-esq"  title="Tornozelo Esquerdo (Anterior)"></button>
 
         <!-- POSTERIOR -->
         <button class="pin hidden" data-side="back" style="left:50%; top:12%;" data-id="back-nuca"             title="Nuca (Posterior)"></button>
@@ -443,51 +445,48 @@
     </div>
   </section>
 
-  <!-- GUIA DE APLICAÇÃO (COMPLETO) -->
+  <!-- GUIA DE APLICAÇÃO -->
   <section class="container block">
     <h3>Como aplicar e potencializar o efeito</h3>
 
     <div class="card">
       <p class="lead">
-        Pode aplicar gel corporal para alívio da dor em áreas como joelhos, ombros, pulsos, costas, pescoço e outras articulações,
-        bem como em músculos tensos, contusões e lesões menores. É importante aplicar o gel sobre a pele limpa e seca,
-        massageando suavemente até à completa absorção e evitando aplicar em mucosas, olhos ou pele ferida.
+        Pode aplicar o gel em joelhos, ombros, pulsos, costas, pescoço e outras articulações,
+        bem como em músculos tensos, contusões e lesões menores. Aplicar sobre a pele limpa e seca,
+        massageando suavemente até completa absorção. Evite mucosas e pele lesionada.
       </p>
 
       <ul class="info">
-        <li><span>Frequência & Duração</span>Recomendado 3–4 aplicações por dia. Alternativamente, 2x/dia (manhã e noite). Pode ser utilizado por até 2 semanas.</li>
-        <li><span>Locais comuns</span>Articulações (joelhos, ombros, pulsos, tornozelos, ancas e dedos), músculos (costas, pescoço/torcicolo) e lesões menores (contusões/hematomas).</li>
+        <li><span>Frequência & Duração</span>3–4 aplicações por dia (ou 2×/dia). Até 2 semanas.</li>
+        <li><span>Locais comuns</span>Articulações e músculos (costas, cervical/torcicolo), contusões/hematomas.</li>
       </ul>
 
       <h4>Dicas para a Aplicação</h4>
       <ul class="tips">
-        <li><strong>Crie um ambiente relaxante:</strong> local tranquilo e confortável, luz suave e música relaxante.</li>
-        <li><strong>Prepare a pele:</strong> pele limpa e seca para melhor absorção.</li>
+        <li><strong>Ambiente:</strong> local tranquilo, luz suave e música relaxante.</li>
+        <li><strong>Prepare a pele:</strong> limpa e seca para melhor absorção.</li>
         <li><strong>Aplique suavemente:</strong> pequena quantidade na área afetada.</li>
-        <li><strong>Massagem eficaz:</strong> movimentos circulares e firmes, sempre no sentido do coração.</li>
-        <li><strong>Até a absorção:</strong> continue a massagem até total absorção.</li>
-        <li><strong>Combine com calor:</strong> após a massagem, bolsa de água quente para prolongar os efeitos.</li>
+        <li><strong>Massagem eficaz:</strong> movimentos circulares e firmes, no sentido do coração.</li>
+        <li><strong>Até absorver:</strong> continue até total absorção.</li>
+        <li><strong>Combine com calor:</strong> bolsa morna após a massagem prolonga os efeitos.</li>
       </ul>
 
-      <h4>Instruções de Aplicação</h4>
+      <h4>Instruções</h4>
       <ol class="info">
-        <li><span>1. Prepare a Pele</span>Limpe a área onde sente dor.</li>
-        <li><span>2. Aplique o Gel</span>Coloque uma pequena quantidade na área afetada.</li>
-        <li><span>3. Massageie</span>Movimentos circulares, lentamente, até completa absorção.</li>
-        <li><span>4. Repita se necessário</span>Várias vezes ao dia conforme intensidade da dor.</li>
+        <li><span>1. Prepare</span>Limpe a área com água e sabão.</li>
+        <li><span>2. Aplique</span>Uma fina camada na área dolorida.</li>
+        <li><span>3. Massageie</span>Em círculos até absorver.</li>
+        <li><span>4. Repita</span>Conforme necessidade, sem exagero.</li>
       </ol>
 
       <div class="notice danger" role="alert" aria-live="polite">
-        <h4 style="margin:0 0 6px 0;">Cuidados e Precauções (LEIA COM ATENÇÃO)</h4>
+        <h4 style="margin:0 0 6px 0;">Cuidados e Precauções</h4>
         <ul class="tips">
-          <li><strong>Uso externo:</strong> apenas sobre a pele.</li>
-          <li><strong>Evite mucosas:</strong> não usar próximo aos olhos e outras mucosas; não inalar.</li>
-          <li><strong>Pele íntegra:</strong> não aplicar em feridas abertas ou pele danificada/irritada.</li>
-          <li><strong>Alergias:</strong> se ocorrer irritação/reação alérgica, interrompa o uso e procure um médico.</li>
-          <li><strong>Crianças e bebês:</strong> usar com precaução; cânfora/mentol podem causar reações adversas.</li>
-          <li><strong>Gestantes e lactantes:</strong> não utilizar.</li>
-          <li><strong>Doenças hepáticas/renais:</strong> não utilizar.</li>
-          <li><strong>Consultar um profissional:</strong> se a dor persistir ou houver dúvidas, procure médico ou farmacêutico.</li>
+          <li><strong>Uso externo.</strong> Evite olhos e mucosas.</li>
+          <li><strong>Pele íntegra.</strong> Não usar em pele ferida/irritada.</li>
+          <li><strong>Alergias:</strong> interrompa em caso de reação e procure médico.</li>
+          <li><strong>Crianças:</strong> usar com precaução.</li>
+          <li><strong>Gestantes/lactantes/doenças:</strong> não utilizar.</li>
         </ul>
       </div>
     </div>
@@ -497,7 +496,7 @@
   <section class="music-wrap">
     <div class="container">
       <h3>Músicas Relaxantes Liv Essências</h3>
-      <p class="muted">Seleção de músicas tranquilas para acompanhar seus momentos de relaxamento e bem-estar.</p>
+      <p class="muted">Seleção de músicas tranquilas para acompanhar seus momentos de relaxamento.</p>
 
       <div class="player">
         <div id="track-title">Brancura Serenata</div>
@@ -515,7 +514,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="brand">
-        <img src="liv-kamp/imagens/logo-liv.png" alt="Liv Essências" class="logo" />
+        <img src="/liv-kamp/imagens/logo.png" alt="Liv Essências" class="logo" />
         <div><strong>Produtos naturais</strong> para o seu bem-estar e qualidade de vida.</div>
       </div>
 
@@ -533,6 +532,6 @@
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="/liv-kamp/app.js?v=2"></script>
 </body>
 </html>
