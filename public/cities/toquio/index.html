@@ -4,7 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Liv Essências — Tóquio</title>
-  <link rel="stylesheet" href="/cities/toquio/style.css?v=3">
+
+  <!-- CSS: se quiser a base global, descomente a linha abaixo -->
+  <!-- <link rel="stylesheet" href="/assets/global/styles.css"> -->
+
+  <!-- CSS local (garanta que o arquivo existe) -->
+  <link rel="stylesheet" href="/cities/toquio/style.css?v=4">
+
+  <!-- A-Frame -->
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
@@ -21,7 +28,6 @@
   <!-- CENA 360º -->
   <section class="scene-wrap">
     <a-scene embedded>
-      <!-- inicia com o pôster de Tóquio -->
       <a-sky id="sky360" src="/cities/toquio/imagens/toquio-poster.png" rotation="0 -90 0"></a-sky>
       <a-entity camera look-controls></a-entity>
     </a-scene>
@@ -33,11 +39,11 @@
       <p>Entre santuários milenares e arranha-céus, Tóquio pulsa com estética minimalista, respeito ao rito e vanguarda.</p>
 
       <div class="actions">
-        <button id="scene-shibuya" class="btn">Shibuya Crossing</button>
-        <button id="scene-sensoji" class="btn">Sensō-ji (Asakusa)</button>
-        <button id="scene-skytree" class="btn">Tokyo Skytree</button>
+        <button id="scene-shibuya"  class="btn">Shibuya Crossing</button>
+        <button id="scene-sensoji"  class="btn">Sensō-ji (Asakusa)</button>
+        <button id="scene-skytree"  class="btn">Tokyo Skytree</button>
         <button id="scene-shinjuku" class="btn">Noite em Shinjuku</button>
-        <button id="scene-poster" class="btn btn-ghost">Pôster</button>
+        <button id="scene-poster"   class="btn btn-ghost">Pôster</button>
       </div>
     </section>
 
@@ -46,17 +52,13 @@
       <h2>Aromas de Tóquio</h2>
       <p class="muted"><em>“Do perfume de sakurá à calma do chá verde, uma cidade que respira leveza e precisão.”</em></p>
 
-      <!-- Preview do aroma -->
       <div id="aromaPreview" class="aroma-preview" hidden>
         <img id="aromaImg" src="" alt="Aroma visual">
       </div>
 
       <div class="aromas-grid">
-        <!-- Brisa -->
         <div class="aroma-card" style="--tone:#6fd3ff">
-          <div class="aroma-head">
-            <h3>Amanhecer em Sumida</h3><span class="pill">Frescor</span>
-          </div>
+          <div class="aroma-head"><h3>Amanhecer em Sumida</h3><span class="pill">Frescor</span></div>
           <p class="aroma-notes">Brisa do rio, cítricos leves, ar limpo</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
@@ -65,11 +67,8 @@
           </div>
         </div>
 
-        <!-- Sakura -->
         <div class="aroma-card" style="--tone:#ff9acb">
-          <div class="aroma-head">
-            <h3>Flores de Sakurá</h3><span class="pill">Delicadeza</span>
-          </div>
+          <div class="aroma-head"><h3>Flores de Sakurá</h3><span class="pill">Delicadeza</span></div>
           <p class="aroma-notes">Sakurá, pétalas úmidas, toque de arroz</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
@@ -78,11 +77,8 @@
           </div>
         </div>
 
-        <!-- Chá verde -->
         <div class="aroma-card" style="--tone:#9be27a">
-          <div class="aroma-head">
-            <h3>Cerimônia do Chá</h3><span class="pill">Calma</span>
-          </div>
+          <div class="aroma-head"><h3>Cerimônia do Chá</h3><span class="pill">Calma</span></div>
           <p class="aroma-notes">Matchá, notas verdes, madeira clara</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
@@ -97,13 +93,13 @@
     <section class="section">
       <h2>Galeria Tóquio</h2>
       <div class="media-grid">
-        <figure><img src="/cities/toquio/imagens/shibuya.png" alt="Shibuya"><figcaption>Shibuya</figcaption></figure>
-        <figure><img src="/cities/toquio/imagens/senso-ji.png" alt="Sensō-ji"><figcaption>Sensō-ji</figcaption></figure>
-        <figure><img src="/cities/toquio/imagens/skytree.png" alt="Tokyo Skytree"><figcaption>Tokyo Skytree</figcaption></figure>
-        <figure><img src="/cities/toquio/imagens/shinjuku.png" alt="Shinjuku"><figcaption>Shinjuku</figcaption></figure>
+        <figure><img src="/cities/toquio/imagens/shibuya.png"   alt="Shibuya"><figcaption>Shibuya</figcaption></figure>
+        <figure><img src="/cities/toquio/imagens/senso-ji.png"  alt="Sensō-ji"><figcaption>Sensō-ji</figcaption></figure>
+        <figure><img src="/cities/toquio/imagens/skytree.png"   alt="Tokyo Skytree"><figcaption>Tokyo Skytree</figcaption></figure>
+        <figure><img src="/cities/toquio/imagens/shinjuku.png"  alt="Shinjuku"><figcaption>Shinjuku</figcaption></figure>
       </div>
 
-      <!-- Narração — Tóquio -->
+      <!-- Narração -->
       <div class="narration-card">
         <h3>Narração — Tóquio</h3>
         <p class="muted">Uma introdução breve à cidade.</p>
@@ -117,35 +113,7 @@
         </audio>
       </div>
     </section>
-
-   <!-- Vídeos -->
-<section class="section">
-  <h2>Vídeos — Tóquio</h2>
-  <div class="media-grid">
-    <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/MaefAK3njXo"
-        title="Vídeo 1 — Tóquio"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/abj4pZOg198"
-        title="Vídeo 2 — Tóquio"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/ss0laiW8Yw4"
-        title="Vídeo 3 — Tóquio"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
-
+  </main>
 
   <!-- Áudios -->
   <audio id="bgAudio" loop preload="auto"><source src="/cities/toquio/audios/musica.mp3" type="audio/mpeg"></audio>
@@ -175,7 +143,7 @@
     document.getElementById("scene-shinjuku").onclick = () => setSky("/cities/toquio/imagens/shinjuku.png");
     document.getElementById("scene-poster").onclick   = () => setSky("/cities/toquio/imagens/toquio-poster.png");
 
-    // Aromas
+    // Aromas (reuso)
     const aromaAudio = document.getElementById('aromaAudio');
     const previewBox = document.getElementById('aromaPreview');
     const previewImg = document.getElementById('aromaImg');
