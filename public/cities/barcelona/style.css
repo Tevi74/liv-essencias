@@ -48,7 +48,6 @@ html, body {
 .hero {
   text-align:center;
   padding:56px 16px 40px;
-  background-color:#001f3f; /* azul marinho */
   background:
     linear-gradient(180deg,rgba(0,0,0,.46),rgba(0,0,0,.60)),
     url("/assets/barcelona-poster.png?v=2") center/cover no-repeat,
