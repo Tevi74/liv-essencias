@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Liv Essências — Buenos Aires</title>
-  <link rel="stylesheet" href="/cities/buenos aires/style.css?v=3">
+  <link rel="stylesheet" href="/cities/buenos-aires/style.css?v=3">
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
   <header class="hero">
-    <img src="/cities/buenos aires/imagens/logo-liv.png" alt="Logo Liv Essências" class="hero-logo" />
+    <img src="/cities/buenos-aires/imagens/logo-liv.png" alt="Logo Liv Essências" class="hero-logo" />
     <h1>Liv Buenos Aires</h1>
     <p>Tango, cafés históricos e o charme das avenidas portenhas em uma experiência sensorial única.</p>
     <div class="hero-actions">
@@ -21,7 +21,7 @@
   <!-- CENA 360º -->
   <section class="scene-wrap">
     <a-scene embedded>
-      <a-sky id="sky360" src="/cities/buenos aires/imagens/buenos-aires-poster.png" rotation="0 -90 0"></a-sky>
+      <a-sky id="sky360" src="/cities/buenos-aires/imagens/buenos-aires-poster.png" rotation="0 -90 0"></a-sky>
       <a-entity camera look-controls></a-entity>
     </a-scene>
   </section>
@@ -57,8 +57,8 @@
           <p class="aroma-notes">Incenso, couro, vinho tinto</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
-              data-audio="/cities/buenos aires/audios/tango-ba.mp3"
-              data-img="/cities/buenos aires/imagens/tango-ba.png">Inspire</button>
+              data-audio="/cities/buenos-aires/audios/tango-ba.mp3"
+              data-img="/cities/buenos-aires/imagens/tango-ba.png">Inspire</button>
           </div>
         </div>
 
@@ -69,8 +69,8 @@
           <p class="aroma-notes">Café expresso, tabaco leve, madeira</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
-              data-audio="/cities/buenos aires/audios/cafe-ba.mp3"
-              data-img="/cities/buenos aires/imagens/cafe-ba.png">Inspire</button>
+              data-audio="/cities/buenos-aires/audios/cafe-ba.mp3"
+              data-img="/cities/buenos-aires/imagens/cafe-ba.png">Inspire</button>
           </div>
         </div>
 
@@ -81,8 +81,8 @@
           <p class="aroma-notes">Rum, âmbar doce, fumaça sutil</p>
           <div class="aroma-actions">
             <button class="btn btn-primary inspire-btn"
-              data-audio="/cities/buenos aires/audios/noite-ba.mp3"
-              data-img="/cities/buenos aires/imagens/noite-ba.png">Inspire</button>
+              data-audio="/cities/buenos-aires/audios/noite-ba.mp3"
+              data-img="/cities/buenos-aires/imagens/noite-ba.png">Inspire</button>
           </div>
         </div>
       </div>
@@ -92,10 +92,10 @@
     <section class="section">
       <h2>Galeria Buenos Aires</h2>
       <div class="media-grid">
-        <figure><img src="/cities/buenos aires/imagens/obelisco.png" alt="Obelisco"><figcaption>Obelisco</figcaption></figure>
-        <figure><img src="/cities/buenos aires/imagens/san-telmo.png" alt="San Telmo"><figcaption>San Telmo</figcaption></figure>
-        <figure><img src="/cities/buenos aires/imagens/caminito.png" alt="Caminito"><figcaption>Caminito</figcaption></figure>
-        <figure><img src="/cities/buenos aires/imagens/casa-rosada.png" alt="Casa Rosada"><figcaption>Casa Rosada</figcaption></figure>
+        <figure><img src="/cities/buenos-aires/imagens/obelisco.png" alt="Obelisco"><figcaption>Obelisco</figcaption></figure>
+        <figure><img src="/cities/buenos-aires/imagens/san-telmo.png" alt="San Telmo"><figcaption>San Telmo</figcaption></figure>
+        <figure><img src="/cities/buenos-aires/imagens/caminito.png" alt="Caminito"><figcaption>Caminito</figcaption></figure>
+        <figure><img src="/cities/buenos-aires/imagens/casa-rosada.png" alt="Casa Rosada"><figcaption>Casa Rosada</figcaption></figure>
       </div>
 
       <!-- Narração -->
@@ -108,7 +108,7 @@
           <button class="btn" id="narStop">Stop</button>
         </div>
         <audio id="narAudio" preload="auto">
-          <source src="/cities/buenos aires/audios/buenos-aires.mp3?v=2" type="audio/mpeg" />
+          <source src="/cities/buenos-aires/audios/buenos-aires.mp3?v=2" type="audio/mpeg" />
         </audio>
       </div>
     </section>
@@ -140,7 +140,7 @@
   </main>
 
   <!-- Áudios -->
-  <audio id="bgAudio" loop preload="auto"><source src="/cities/buenos aires/audios/musica.mp3" type="audio/mpeg"></audio>
+  <audio id="bgAudio" loop preload="auto"><source src="/cities/buenos-aires/audios/musica.mp3" type="audio/mpeg"></audio>
   <audio id="aromaAudio" preload="auto"></audio>
 
   <footer class="footer"><small>© Liv Essências — Buenos Aires</small></footer>
@@ -161,11 +161,11 @@
     // 360 — cenas
     const sky = document.getElementById("sky360");
     const setSky = (src) => sky.setAttribute("src", src);
-    document.getElementById("scene-obelisco").onclick = () => setSky("/cities/buenos aires/imagens/obelisco.png");
-    document.getElementById("scene-san-telmo").onclick = () => setSky("/cities/buenos aires/imagens/san-telmo.png");
-    document.getElementById("scene-caminito").onclick = () => setSky("/cities/buenos aires/imagens/caminito.png");
-    document.getElementById("scene-casa-rosada").onclick = () => setSky("/cities/buenos aires/imagens/casa-rosada.png");
-    document.getElementById("scene-poster").onclick = () => setSky("/cities/buenos aires/imagens/buenos-aires-poster.png");
+    document.getElementById("scene-obelisco").onclick = () => setSky("/cities/buenos-aires/imagens/obelisco.png");
+    document.getElementById("scene-san-telmo").onclick = () => setSky("/cities/buenos-aires/imagens/san-telmo.png");
+    document.getElementById("scene-caminito").onclick = () => setSky("/cities/buenos-aires/imagens/caminito.png");
+    document.getElementById("scene-casa-rosada").onclick = () => setSky("/cities/buenos-aires/imagens/casa-rosada.png");
+    document.getElementById("scene-poster").onclick = () => setSky("/cities/buenos-aires/imagens/buenos-aires-poster.png");
 
     // Aromas
     const aromaAudio = document.getElementById('aromaAudio');
