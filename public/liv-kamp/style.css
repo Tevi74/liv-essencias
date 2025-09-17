@@ -3,12 +3,15 @@
   --accent:#2ec4b6; --accent2:#6c63ff; --good:#12b886; --warn:#f59f00; --danger:#e03131;
   --shadow:0 10px 28px rgba(0,0,0,.08); --r:16px;
 }
+
+/* Utilidades */
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Arial,sans-serif}
 img{max-width:100%;height:auto;display:block}
 .container{max-width:1120px;margin:0 auto;padding:24px}
 .muted{color:var(--muted)} .small{font-size:14px}
 h3{margin:0 0 10px}
+.hidden{display:none !important}
 
 /* HEADER */
 .header-wrap{
@@ -51,20 +54,47 @@ h3{margin:0 0 10px}
 .tab-btn{border:1px solid #d8e1e8;background:#fff;padding:8px 12px;border-radius:10px;cursor:pointer}
 .tab-btn.active{border-color:var(--accent);color:#0a7d71}
 
-/* Corpo + Painel */
+/* Corpo + Painel (base para pins ficar 100% corretos) */
 .viz-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
-.body-canvas{position:relative;background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:12px;min-height:560px}
-.body-canvas img{width:100%;height:auto;object-fit:contain}
-.pin{position:absolute;transform:translate(-50%,-50%);width:26px;height:26px;border-radius:50%;
-  border:none;background:radial-gradient(circle at 35% 30%, #fff, #ff3b3b);cursor:pointer;box-shadow:0 0 0 4px rgba(224,49,49,.2)}
-.pin.hidden{display:none}
+
+/* >>> Área da imagem que serve de referência para os % dos pins */
+.body-canvas{
+  position:relative;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  /* NUNCA usar padding/min-height aqui, senão o cálculo % desvia no mobile */
+  padding:0;
+  min-height:auto;
+  margin:12px;            /* respiro ao redor, sem afetar o overlay dos pins */
+  overflow:visible;
+}
+.body-canvas img{
+  display:block;
+  width:100%;
+  height:auto;            /* mantém a proporção da imagem */
+  object-fit:contain;
+}
+
+/* Pins */
+.pin{
+  position:absolute;
+  left:0; top:0;
+  transform:translate(-50%,-50%);
+  width:26px; height:26px;
+  border-radius:50%;
+  border:none;
+  background:radial-gradient(circle at 35% 30%, #fff, #ff3b3b);
+  cursor:pointer;
+  box-shadow:0 0 0 4px rgba(224,49,49,.2);
+  z-index:3;
+}
 .pin:focus{outline:2px solid rgba(46,196,182,.7)}
 
 /* Painel e Cards */
 .panel{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:16px}
 .panel-empty{text-align:center;color:var(--muted)} .panel-empty .target{font-size:36px;margin:8px 0 4px}
 .card{border:1px solid #e6eaee;border-radius:12px;padding:16px;margin-top:12px}
-.card.hidden{display:none}
 .lead{color:#374d63;margin:6px 0 8px}
 .info{list-style:none;padding-left:0;margin:0}
 .info li{margin:8px 0}
@@ -86,28 +116,6 @@ h3{margin:0 0 10px}
 .controls button{border:1px solid #d8e1e8;background:#fff;color:#0d1b2a;padding:8px 12px;border-radius:10px;cursor:pointer}
 .controls button:hover{background:#f7f9fb}
 .btn-primary{background:#000 !important;color:#fff !important;border:1px solid #000 !important}
-/* ====== Fix responsivo dos pins (mobile) ====== */
-/* 1) Remover interferência do padding/min-height no contêiner que serve de referência */
-.body-canvas{
-  padding: 0 !important;     /* antes tinha padding:12px; */
-  min-height: auto !important; /* remove a altura mínima que distorcia a referência */
-}
-
-/* 2) Dá o respiro visual por fora (não dentro do overlay dos pins) */
-.body-canvas{ margin: 12px; }  /* opcional; só para manter espaço branco ao redor */
-
-/* 3) Garantir que a imagem seja a “base” perfeita para os % */
-.body-canvas img{
-  display:block;
-  width:100%;
-  height:auto;
-  object-fit:contain;
-}
-
-/* 4) (Opcional) Ajuste de tamanho dos pins no celular para ficar proporcional */
-@media (max-width: 480px){
-  .pin{ width: 18px; height: 18px; }
-}
 
 /* Footer */
 .footer{background:#0d1b2a;color:#fff;margin-top:40px}
@@ -115,43 +123,21 @@ h3{margin:0 0 10px}
 .footer-inner{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
 .legal{grid-column:1/-1}
 
-/* Responsivo */
+/* ===== Responsivo ===== */
 @media (max-width: 980px){
-  
-  /* ====== Interatividade dos Pins e Painel ====== */
-.hidden { display: none !important; }
-
-.body-canvas { position: relative; }
-.body-canvas img { display: block; width: 100%; height: auto; }
-
-.pin {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #fff;
-  background: #d7263d; /* vermelho discreto */
-  border-radius: 999px;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,.35);
-  z-index: 3;
-}
-.pin:hover { transform: scale(1.06); }
-
-.panel .card {
-  background:#fff;
-  color:#2b2b2b;
-  border-radius:12px;
-  padding:12px;
-  margin-bottom:12px;
-}
-.panel .card h4 { margin: 0 0 6px; }
-.panel .info { list-style: none; padding: 0; margin: 8px 0; }
-.panel .info li { margin: 4px 0; }
-.panel .info li span { font-weight: 600; margin-right: 6px; }
-.panel .tips { margin: 8px 0 0 16px; }
-
   .hero{grid-template-columns:1fr}
   .viz-wrap{grid-template-columns:1fr}
   .footer-inner{grid-template-columns:1fr}
+
+  /* pins levemente menores no tablet/phone */
+  .pin{width:22px;height:22px}
+  .viz-keep{min-height:520px}
 }
+
+@media (max-width: 480px){
+  /* menor ainda em telefones estreitos */
+  .pin{width:18px;height:18px}
+  .viz-keep{min-height:440px;padding:8px}
+}
+
 
