@@ -11,7 +11,6 @@ img{max-width:100%;height:auto;display:block}
 .container{max-width:1120px;margin:0 auto;padding:24px}
 .muted{color:var(--muted)} .small{font-size:14px}
 h3{margin:0 0 10px}
-.hidden{display:none !important}
 
 /* HEADER */
 .header-wrap{
@@ -36,7 +35,7 @@ h3{margin:0 0 10px}
 /* blocos */
 .block{margin-top:40px}
 
-/* Áudio (clicável sempre) */
+/* Áudio */
 .audio-box,.audio-360{position:relative; z-index:2147483647; isolation:isolate}
 .audio-player{width:100%;max-width:560px;display:block;pointer-events:auto}
 
@@ -54,32 +53,31 @@ h3{margin:0 0 10px}
 .tab-btn{border:1px solid #d8e1e8;background:#fff;padding:8px 12px;border-radius:10px;cursor:pointer}
 .tab-btn.active{border-color:var(--accent);color:#0a7d71}
 
-/* Corpo + Painel (base para pins ficar 100% corretos) */
+/* Corpo + Painel */
 .viz-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
 
-/* >>> Área da imagem que serve de referência para os % dos pins */
+/* Área da imagem que serve de referência para os % dos pins
+   Mantemos o padding original (desktop ok) e REMOVEMOS qualquer altura forçada
+   para o mobile não “esticar” a área e deslocar os % */
 .body-canvas{
   position:relative;
   background:#fff;
   border-radius:12px;
   box-shadow:var(--shadow);
-  /* NUNCA usar padding/min-height aqui, senão o cálculo % desvia no mobile */
-  padding:0;
-  min-height:auto;
-  margin:12px;            /* respiro ao redor, sem afetar o overlay dos pins */
+  padding:12px;         /* mantém o visual do desktop */
+  min-height:auto;      /* evita esticar no mobile */
   overflow:visible;
 }
 .body-canvas img{
   display:block;
   width:100%;
-  height:auto;            /* mantém a proporção da imagem */
+  height:auto;
   object-fit:contain;
 }
 
-/* Pins */
+/* Pins (clicáveis) */
 .pin{
   position:absolute;
-  left:0; top:0;
   transform:translate(-50%,-50%);
   width:26px; height:26px;
   border-radius:50%;
@@ -87,14 +85,16 @@ h3{margin:0 0 10px}
   background:radial-gradient(circle at 35% 30%, #fff, #ff3b3b);
   cursor:pointer;
   box-shadow:0 0 0 4px rgba(224,49,49,.2);
-  z-index:3;
+  z-index:3;            /* acima da imagem SEM cobrir o painel */
 }
+.pin.hidden{display:none}
 .pin:focus{outline:2px solid rgba(46,196,182,.7)}
 
 /* Painel e Cards */
 .panel{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:16px}
 .panel-empty{text-align:center;color:var(--muted)} .panel-empty .target{font-size:36px;margin:8px 0 4px}
 .card{border:1px solid #e6eaee;border-radius:12px;padding:16px;margin-top:12px}
+.card.hidden{display:none}
 .lead{color:#374d63;margin:6px 0 8px}
 .info{list-style:none;padding-left:0;margin:0}
 .info li{margin:8px 0}
@@ -129,15 +129,17 @@ h3{margin:0 0 10px}
   .viz-wrap{grid-template-columns:1fr}
   .footer-inner{grid-template-columns:1fr}
 
-  /* pins levemente menores no tablet/phone */
+  /* pins um pouco menores em telas médias */
   .pin{width:22px;height:22px}
   .viz-keep{min-height:520px}
 }
 
+/* Em telefones estreitos:
+   - NÃO mudamos o padding da área base (para não deslocar %)
+   - Só reduzimos o tamanho visual dos pins para caber melhor
+   - Garantimos que nada sobreponha os pins */
 @media (max-width: 480px){
-  /* menor ainda em telefones estreitos */
   .pin{width:18px;height:18px}
-  .viz-keep{min-height:440px;padding:8px}
+  .viz-keep{min-height:440px;padding:12px}
+  .panel{position:relative; z-index:1}
 }
-
-
